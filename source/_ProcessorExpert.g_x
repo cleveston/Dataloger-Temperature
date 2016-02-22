@@ -1,0 +1,47 @@
+<CodeGenerationInfo>
+  <ToolchainSettings>
+    <option>
+      <name>PE_G_4PEx_ToolChain_Compiler_SearchUserPaths</name>
+      <values lines_count="2">
+        <Line>"${ProjDirPath}/Sources"</Line>
+        <Line>"${ProjDirPath}/Generated_Code"</Line>
+      </values>
+    </option>
+  </ToolchainSettings>
+  <GeneratedFilesList>
+    <GeneratedByPE>
+      <File Name="Project_Settings/Linker_Files/ProcessorExpert.prm" FileDate="2015-06-25, 15:40:16" FileAge="1435257616612" FileType="8" CompNumb="4" />
+      <File Name="Generated_Code/Vtpm1ovf.h" FileDate="2015-06-25, 15:40:15" FileAge="1435257615315" FileType="45637" CompNumb="8" />
+      <File Name="Generated_Code/Vlvd.c" FileDate="2015-06-25, 15:40:16" FileAge="1435257616296" FileType="45637" CompNumb="35" />
+      <File Name="Generated_Code/PE_Const.h" FileDate="2015-06-25, 15:40:16" FileAge="1435257616473" FileType="45637" />
+      <File Name="Documentation/ProcessorExpert_SIGNALS.txt" FileDate="2015-06-29, 20:09:02" FileAge="1435619342157" FileType="3072" />
+      <File Name="Generated_Code/Vtpm1ovf.c" FileDate="2015-06-25, 15:40:15" FileAge="1435257615396" FileType="45637" CompNumb="8" />
+      <File Name="Generated_Code/Vtpm2ovf.h" FileDate="2015-06-25, 15:40:15" FileAge="1435257615463" FileType="45637" CompNumb="12" />
+      <File Name="Generated_Code/Vtpm2ovf.c" FileDate="2015-06-25, 15:40:15" FileAge="1435257615683" FileType="45637" CompNumb="12" />
+      <File Name="Generated_Code/relogio.h" FileDate="2015-06-25, 15:40:15" FileAge="1435257615950" FileType="45637" CompNumb="24" />
+      <File Name="Generated_Code/ASerial.h" FileDate="2015-06-25, 17:04:39" FileAge="1435262679398" FileType="45637" CompNumb="26" />
+      <File Name="Generated_Code/IO_Map.h" FileDate="2015-06-25, 15:40:16" FileAge="1435257616478" FileType="45637" />
+      <File Name="Sources/ProcessorExpert.c" FileDate="2015-06-29, 20:09:02" FileAge="1435619342133" FileType="128" />
+      <File Name="Generated_Code/Vtpm3ovf.h" FileDate="2015-06-25, 15:40:15" FileAge="1435257615714" FileType="45637" CompNumb="13" />
+      <File Name="Generated_Code/PE_Types.h" FileDate="2015-06-25, 15:40:16" FileAge="1435257616427" FileType="45637" />
+      <File Name="Generated_Code/relogio.c" FileDate="2015-06-25, 15:40:16" FileAge="1435257616016" FileType="45637" CompNumb="24" />
+      <File Name="Generated_Code/ASerial.c" FileDate="2015-06-25, 17:04:39" FileAge="1435262679407" FileType="45637" CompNumb="26" />
+      <File Name="Generated_Code/IO_Map.c" FileDate="2015-06-25, 15:40:16" FileAge="1435257616499" FileType="45637" />
+      <File Name="Generated_Code/Vtpm3ovf.c" FileDate="2015-06-25, 15:40:15" FileAge="1435257615878" FileType="45637" CompNumb="13" />
+      <File Name="Generated_Code/Vectors.c" FileDate="2015-06-29, 17:00:11" FileAge="1435608011874" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/PE_Error.h" FileDate="2015-06-25, 15:40:16" FileAge="1435257616455" FileType="45637" />
+      <File Name="Documentation/ProcessorExpert.txt" FileDate="2015-06-29, 17:00:11" FileAge="1435608011938" FileType="3072" />
+      <File Name="Generated_Code/Virq.h" FileDate="2015-06-26, 17:06:44" FileAge="1435349204157" FileType="45637" CompNumb="58" />
+      <File Name="Sources/Events.h" FileDate="2015-06-29, 17:00:11" FileAge="1435608011892" FileType="131328" />
+      <File Name="Generated_Code/WDog.h" FileDate="2015-06-29, 17:00:11" FileAge="1435608011846" FileType="45637" CompNumb="69" />
+      <File Name="Generated_Code/Virq.c" FileDate="2015-06-26, 17:06:44" FileAge="1435349204174" FileType="45637" CompNumb="58" />
+      <File Name="Generated_Code/Cpu.h" FileDate="2015-06-25, 15:40:16" FileAge="1435257616509" FileType="45637" CompNumb="4" />
+      <File Name="Sources/Events.c" FileDate="2015-06-26, 06:37:42" FileAge="1435311462000" FileType="131328" />
+      <File Name="Generated_Code/WDog.c" FileDate="2015-06-29, 17:00:11" FileAge="1435608011844" FileType="45637" CompNumb="69" />
+      <File Name="Documentation/ProcessorExpert_Settings.xml" FileDate="2015-06-29, 17:00:11" FileAge="1435608011926" FileType="3072" />
+      <File Name="Generated_Code/Cpu.c" FileDate="2015-06-29, 17:00:11" FileAge="1435608011874" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/Vlvd.h" FileDate="2015-06-25, 15:40:16" FileAge="1435257616270" FileType="45637" CompNumb="35" />
+    </GeneratedByPE>
+  </GeneratedFilesList>
+  <CodeGenReference>31</CodeGenReference>
+</CodeGenerationInfo>

@@ -1,0 +1,2522 @@
+*** EVALUATION ***
+PROGRAM "Barrichelo.abs"
+
+*********************************************************************************************
+TARGET SECTION
+---------------------------------------------------------------------------------------------
+Processor   : Freescale HC08
+Memory Model: SMALL
+File Format : ELF\DWARF 2.0
+Linker      : SmartLinker V-5.0.50 Build 13184, Jul  4 2013
+
+*********************************************************************************************
+FILE SECTION
+---------------------------------------------------------------------------------------------
+ProcessorExpert_c.obj                   Model: SMALL,         Lang: ANSI-C
+amostragem_c.obj                        Model: SMALL,         Lang: ANSI-C
+botaoIRQ_c.obj                          Model: SMALL,         Lang: ANSI-C
+eeprom_c.obj                            Model: SMALL,         Lang: ANSI-C
+serial_c.obj                            Model: SMALL,         Lang: ANSI-C
+timer_c.obj                             Model: SMALL,         Lang: ANSI-C
+start08_c.obj                           Model: SMALL,         Lang: ANSI-C
+ASerial_c.obj                           Model: SMALL,         Lang: ANSI-C
+Cpu_c.obj                               Model: SMALL,         Lang: ANSI-C
+IO_Map_c.obj                            Model: SMALL,         Lang: ANSI-C
+Vectors_c.obj                           Model: SMALL,         Lang: ANSI-C
+relogio_c.obj                           Model: SMALL,         Lang: ANSI-C
+ctype.c.o (ansiis.lib)                  Model: SMALL,         Lang: ANSI-C
+printf.c.o (ansiis.lib)                 Model: SMALL,         Lang: ANSI-C
+rtshc08.c.o (ansiis.lib)                Model: SMALL,         Lang: ANSI-C
+scanf.c.o (ansiis.lib)                  Model: SMALL,         Lang: ANSI-C
+stdlib.c.o (ansiis.lib)                 Model: SMALL,         Lang: ANSI-C
+string.c.o (ansiis.lib)                 Model: SMALL,         Lang: ANSI-C
+
+*********************************************************************************************
+STARTUP SECTION
+---------------------------------------------------------------------------------------------
+Entry point: 0x2084 (_EntryPoint)
+_startupData is allocated at 0x2136 and uses 6 Bytes
+extern struct _tagStartup {
+  unsigned nofZeroOut     1
+  _Range   pZeroOut       0xA0     1091
+  _Copy    *toCopyDownBeg 0x5679
+} _startupData;
+
+*********************************************************************************************
+SECTION-ALLOCATION SECTION
+Section Name                    Size  Type     From       To       Segment
+---------------------------------------------------------------------------------------------
+.data                            517   R/W       0xA0      0x2A4   RAM
+.text                          11242     R     0x2144     0x4D2D   ROM
+.rodata                          140     R     0x4D2E     0x4DB9   ROM
+.rodata1                        2239     R     0x4DBA     0x5678   ROM
+.abs_section_ffbd                  1     R     0xFFBD     0xFFBD   .absSeg0
+.abs_section_ffbf                  1     R     0xFFBF     0xFFBF   .absSeg1
+.abs_section_0                     1   N/I        0x0        0x0   .absSeg2
+.abs_section_1                     1   N/I        0x1        0x1   .absSeg3
+.abs_section_2                     1   N/I        0x2        0x2   .absSeg4
+.abs_section_3                     1   N/I        0x3        0x3   .absSeg5
+.abs_section_4                     1   N/I        0x4        0x4   .absSeg6
+.abs_section_5                     1   N/I        0x5        0x5   .absSeg7
+.abs_section_6                     1   N/I        0x6        0x6   .absSeg8
+.abs_section_7                     1   N/I        0x7        0x7   .absSeg9
+.abs_section_8                     1   N/I        0x8        0x8   .absSeg10
+.abs_section_9                     1   N/I        0x9        0x9   .absSeg11
+.abs_section_a                     1   N/I        0xA        0xA   .absSeg12
+.abs_section_b                     1   N/I        0xB        0xB   .absSeg13
+.abs_section_c                     1   N/I        0xC        0xC   .absSeg14
+.abs_section_d                     1   N/I        0xD        0xD   .absSeg15
+.abs_section_e                     1   N/I        0xE        0xE   .absSeg16
+.abs_section_f                     1   N/I        0xF        0xF   .absSeg17
+.abs_section_10                    1   N/I       0x10       0x10   .absSeg18
+.abs_section_11                    1   N/I       0x11       0x11   .absSeg19
+.abs_section_16                    1   N/I       0x16       0x16   .absSeg20
+.abs_section_17                    1   N/I       0x17       0x17   .absSeg21
+.abs_section_18                    1   N/I       0x18       0x18   .absSeg22
+.abs_section_19                    1   N/I       0x19       0x19   .absSeg23
+.abs_section_1a                    1   N/I       0x1A       0x1A   .absSeg24
+.abs_section_1b                    1   N/I       0x1B       0x1B   .absSeg25
+.abs_section_1c                    1   N/I       0x1C       0x1C   .absSeg26
+.abs_section_1d                    1   N/I       0x1D       0x1D   .absSeg27
+.abs_section_1e                    1   N/I       0x1E       0x1E   .absSeg28
+.abs_section_1f                    1   N/I       0x1F       0x1F   .absSeg29
+.abs_section_22                    1   N/I       0x22       0x22   .absSeg30
+.abs_section_23                    1   N/I       0x23       0x23   .absSeg31
+.abs_section_24                    1   N/I       0x24       0x24   .absSeg32
+.abs_section_25                    1   N/I       0x25       0x25   .absSeg33
+.abs_section_26                    1   N/I       0x26       0x26   .absSeg34
+.abs_section_27                    1   N/I       0x27       0x27   .absSeg35
+.abs_section_28                    1   N/I       0x28       0x28   .absSeg36
+.abs_section_29                    1   N/I       0x29       0x29   .absSeg37
+.abs_section_2a                    1   N/I       0x2A       0x2A   .absSeg38
+.abs_section_2b                    1   N/I       0x2B       0x2B   .absSeg39
+.abs_section_2d                    1   N/I       0x2D       0x2D   .absSeg40
+.abs_section_2e                    1   N/I       0x2E       0x2E   .absSeg41
+.abs_section_2f                    1   N/I       0x2F       0x2F   .absSeg42
+.abs_section_30                    1   N/I       0x30       0x30   .absSeg43
+.abs_section_31                    1   N/I       0x31       0x31   .absSeg44
+.abs_section_32                    1   N/I       0x32       0x32   .absSeg45
+.abs_section_33                    1   N/I       0x33       0x33   .absSeg46
+.abs_section_34                    1   N/I       0x34       0x34   .absSeg47
+.abs_section_35                    1   N/I       0x35       0x35   .absSeg48
+.abs_section_38                    1   N/I       0x38       0x38   .absSeg49
+.abs_section_39                    1   N/I       0x39       0x39   .absSeg50
+.abs_section_3a                    1   N/I       0x3A       0x3A   .absSeg51
+.abs_section_3b                    1   N/I       0x3B       0x3B   .absSeg52
+.abs_section_3c                    1   N/I       0x3C       0x3C   .absSeg53
+.abs_section_3d                    1   N/I       0x3D       0x3D   .absSeg54
+.abs_section_3e                    1   N/I       0x3E       0x3E   .absSeg55
+.abs_section_40                    1   N/I       0x40       0x40   .absSeg56
+.abs_section_45                    1   N/I       0x45       0x45   .absSeg57
+.abs_section_48                    1   N/I       0x48       0x48   .absSeg58
+.abs_section_4b                    1   N/I       0x4B       0x4B   .absSeg59
+.abs_section_50                    1   N/I       0x50       0x50   .absSeg60
+.abs_section_55                    1   N/I       0x55       0x55   .absSeg61
+.abs_section_58                    1   N/I       0x58       0x58   .absSeg62
+.abs_section_5b                    1   N/I       0x5B       0x5B   .absSeg63
+.abs_section_60                    1   N/I       0x60       0x60   .absSeg64
+.abs_section_65                    1   N/I       0x65       0x65   .absSeg65
+.abs_section_68                    1   N/I       0x68       0x68   .absSeg66
+.abs_section_6b                    1   N/I       0x6B       0x6B   .absSeg67
+.abs_section_6e                    1   N/I       0x6E       0x6E   .absSeg68
+.abs_section_71                    1   N/I       0x71       0x71   .absSeg69
+.abs_section_74                    1   N/I       0x74       0x74   .absSeg70
+.abs_section_78                    1   N/I       0x78       0x78   .absSeg71
+.abs_section_79                    1   N/I       0x79       0x79   .absSeg72
+.abs_section_7a                    1   N/I       0x7A       0x7A   .absSeg73
+.abs_section_7b                    1   N/I       0x7B       0x7B   .absSeg74
+.abs_section_7c                    1   N/I       0x7C       0x7C   .absSeg75
+.abs_section_7d                    1   N/I       0x7D       0x7D   .absSeg76
+.abs_section_7e                    1   N/I       0x7E       0x7E   .absSeg77
+.abs_section_7f                    1   N/I       0x7F       0x7F   .absSeg78
+.abs_section_1800                  1   N/I     0x1800     0x1800   .absSeg79
+.abs_section_1801                  1   N/I     0x1801     0x1801   .absSeg80
+.abs_section_1802                  1   N/I     0x1802     0x1802   .absSeg81
+.abs_section_1803                  1   N/I     0x1803     0x1803   .absSeg82
+.abs_section_1808                  1   N/I     0x1808     0x1808   .absSeg83
+.abs_section_1809                  1   N/I     0x1809     0x1809   .absSeg84
+.abs_section_180b                  1   N/I     0x180B     0x180B   .absSeg85
+.abs_section_180e                  1   N/I     0x180E     0x180E   .absSeg86
+.abs_section_180f                  1   N/I     0x180F     0x180F   .absSeg87
+.abs_section_1818                  1   N/I     0x1818     0x1818   .absSeg88
+.abs_section_1819                  1   N/I     0x1819     0x1819   .absSeg89
+.abs_section_181a                  1   N/I     0x181A     0x181A   .absSeg90
+.abs_section_181b                  1   N/I     0x181B     0x181B   .absSeg91
+.abs_section_181c                  1   N/I     0x181C     0x181C   .absSeg92
+.abs_section_181d                  1   N/I     0x181D     0x181D   .absSeg93
+.abs_section_181e                  1   N/I     0x181E     0x181E   .absSeg94
+.abs_section_181f                  1   N/I     0x181F     0x181F   .absSeg95
+.abs_section_1820                  1   N/I     0x1820     0x1820   .absSeg96
+.abs_section_1821                  1   N/I     0x1821     0x1821   .absSeg97
+.abs_section_1823                  1   N/I     0x1823     0x1823   .absSeg98
+.abs_section_1824                  1   N/I     0x1824     0x1824   .absSeg99
+.abs_section_1825                  1   N/I     0x1825     0x1825   .absSeg100
+.abs_section_1826                  1   N/I     0x1826     0x1826   .absSeg101
+.abs_section_1830                  1   N/I     0x1830     0x1830   .absSeg102
+.abs_section_1831                  1   N/I     0x1831     0x1831   .absSeg103
+.abs_section_1832                  1   N/I     0x1832     0x1832   .absSeg104
+.abs_section_1838                  1   N/I     0x1838     0x1838   .absSeg105
+.abs_section_1839                  1   N/I     0x1839     0x1839   .absSeg106
+.abs_section_183a                  1   N/I     0x183A     0x183A   .absSeg107
+.abs_section_183b                  1   N/I     0x183B     0x183B   .absSeg108
+.abs_section_183d                  1   N/I     0x183D     0x183D   .absSeg109
+.abs_section_1840                  1   N/I     0x1840     0x1840   .absSeg110
+.abs_section_1841                  1   N/I     0x1841     0x1841   .absSeg111
+.abs_section_1842                  1   N/I     0x1842     0x1842   .absSeg112
+.abs_section_1844                  1   N/I     0x1844     0x1844   .absSeg113
+.abs_section_1845                  1   N/I     0x1845     0x1845   .absSeg114
+.abs_section_1846                  1   N/I     0x1846     0x1846   .absSeg115
+.abs_section_1848                  1   N/I     0x1848     0x1848   .absSeg116
+.abs_section_1849                  1   N/I     0x1849     0x1849   .absSeg117
+.abs_section_184a                  1   N/I     0x184A     0x184A   .absSeg118
+.abs_section_184c                  1   N/I     0x184C     0x184C   .absSeg119
+.abs_section_184d                  1   N/I     0x184D     0x184D   .absSeg120
+.abs_section_184e                  1   N/I     0x184E     0x184E   .absSeg121
+.abs_section_1850                  1   N/I     0x1850     0x1850   .absSeg122
+.abs_section_1851                  1   N/I     0x1851     0x1851   .absSeg123
+.abs_section_1852                  1   N/I     0x1852     0x1852   .absSeg124
+.abs_section_1854                  1   N/I     0x1854     0x1854   .absSeg125
+.abs_section_1855                  1   N/I     0x1855     0x1855   .absSeg126
+.abs_section_1856                  1   N/I     0x1856     0x1856   .absSeg127
+.abs_section_1858                  1   N/I     0x1858     0x1858   .absSeg128
+.abs_section_1859                  1   N/I     0x1859     0x1859   .absSeg129
+.abs_section_185a                  1   N/I     0x185A     0x185A   .absSeg130
+.abs_section_185c                  1   N/I     0x185C     0x185C   .absSeg131
+.abs_section_185d                  1   N/I     0x185D     0x185D   .absSeg132
+.abs_section_185e                  1   N/I     0x185E     0x185E   .absSeg133
+.abs_section_1860                  1   N/I     0x1860     0x1860   .absSeg134
+.abs_section_1861                  1   N/I     0x1861     0x1861   .absSeg135
+.abs_section_1862                  1   N/I     0x1862     0x1862   .absSeg136
+.abs_section_1868                  1   N/I     0x1868     0x1868   .absSeg137
+.abs_section_1869                  1   N/I     0x1869     0x1869   .absSeg138
+.abs_section_186a                  1   N/I     0x186A     0x186A   .absSeg139
+.abs_section_186b                  1   N/I     0x186B     0x186B   .absSeg140
+.abs_section_186c                  1   N/I     0x186C     0x186C   .absSeg141
+.abs_section_186d                  1   N/I     0x186D     0x186D   .absSeg142
+.abs_section_1872                  1   N/I     0x1872     0x1872   .absSeg143
+.abs_section_1873                  1   N/I     0x1873     0x1873   .absSeg144
+.abs_section_1874                  1   N/I     0x1874     0x1874   .absSeg145
+.abs_section_1875                  1   N/I     0x1875     0x1875   .absSeg146
+.abs_section_1876                  1   N/I     0x1876     0x1876   .absSeg147
+.abs_section_1877                  1   N/I     0x1877     0x1877   .absSeg148
+.abs_section_1878                  1   N/I     0x1878     0x1878   .absSeg149
+.abs_section_1879                  1   N/I     0x1879     0x1879   .absSeg150
+.abs_section_187a                  1   N/I     0x187A     0x187A   .absSeg151
+.abs_section_187b                  1   N/I     0x187B     0x187B   .absSeg152
+.abs_section_187c                  1   N/I     0x187C     0x187C   .absSeg153
+.abs_section_187d                  1   N/I     0x187D     0x187D   .absSeg154
+.abs_section_12                    2   N/I       0x12       0x13   .absSeg155
+.abs_section_14                    2   N/I       0x14       0x15   .absSeg156
+.abs_section_20                    2   N/I       0x20       0x21   .absSeg157
+.abs_section_41                    2   N/I       0x41       0x42   .absSeg158
+.abs_section_43                    2   N/I       0x43       0x44   .absSeg159
+.abs_section_46                    2   N/I       0x46       0x47   .absSeg160
+.abs_section_49                    2   N/I       0x49       0x4A   .absSeg161
+.abs_section_4c                    2   N/I       0x4C       0x4D   .absSeg162
+.abs_section_51                    2   N/I       0x51       0x52   .absSeg163
+.abs_section_53                    2   N/I       0x53       0x54   .absSeg164
+.abs_section_56                    2   N/I       0x56       0x57   .absSeg165
+.abs_section_59                    2   N/I       0x59       0x5A   .absSeg166
+.abs_section_5c                    2   N/I       0x5C       0x5D   .absSeg167
+.abs_section_61                    2   N/I       0x61       0x62   .absSeg168
+.abs_section_63                    2   N/I       0x63       0x64   .absSeg169
+.abs_section_66                    2   N/I       0x66       0x67   .absSeg170
+.abs_section_69                    2   N/I       0x69       0x6A   .absSeg171
+.abs_section_6c                    2   N/I       0x6C       0x6D   .absSeg172
+.abs_section_6f                    2   N/I       0x6F       0x70   .absSeg173
+.abs_section_72                    2   N/I       0x72       0x73   .absSeg174
+.abs_section_75                    2   N/I       0x75       0x76   .absSeg175
+.abs_section_1806                  2   N/I     0x1806     0x1807   .absSeg176
+.abs_section_1810                  2   N/I     0x1810     0x1811   .absSeg177
+.abs_section_1812                  2   N/I     0x1812     0x1813   .absSeg178
+.abs_section_1814                  2   N/I     0x1814     0x1815   .absSeg179
+.abs_section_1816                  2   N/I     0x1816     0x1817   .absSeg180
+.abs_section_1870                  2   N/I     0x1870     0x1871   .absSeg181
+.abs_section_ffc0                 64     R     0xFFC0     0xFFFF   .absSeg182
+.bss                              52   R/W      0x2A5      0x2D8   RAM
+.startData                        14     R     0x2136     0x2143   ROM
+.init                            182     R     0x2080     0x2135   ROM
+.common                          522   R/W      0x2D9      0x4E2   RAM
+.stack                           512   R/W      0x4E3      0x6E2   RAM
+.copy                             21     R     0x5679     0x568D   ROM
+
+Summary of section sizes per section type:
+READ_ONLY (R):        3650 (dec:    13904)
+READ_WRITE (R/W):      643 (dec:     1603)
+NO_INIT (N/I):          CF (dec:      207)
+
+*********************************************************************************************
+VECTOR-ALLOCATION SECTION
+    Address     InitValue   InitFunction
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+OBJECT-ALLOCATION SECTION
+     Name               Module                 Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+MODULE:                 -- ProcessorExpert_c.obj --
+- PROCEDURES:
+     configuraLVD                              2144       B      11       1   .text       
+     tensaoBaixa                               214F      32      50       1   .text       
+     sair                                      2181       A      10       1   .text       
+     calibrar                                  218B      48      72       1   .text       
+     ajuda                                     21D3      54      84       1   .text       
+     status                                    2227      C5     197       1   .text       
+     setDate                                   22EC      90     144       1   .text       
+     setTime                                   237C      8F     143       1   .text       
+     setSenha                                  240B      33      51       1   .text       
+     setAmostragem                             243E      48      72       1   .text       
+     mostrar                                   2486     1CF     463       7   .text       
+     main                                      2655     39E     926      41   .text       
+- VARIABLES:
+     STRING.e.1                                4DBA       2       2       1   .rodata1    
+     STRING..Sessao.Finalizada..2              4DBC      14      20       1   .rodata1    
+     STRING..Informe.a.temperatu.3             4DD0      19      25       1   .rodata1    
+     STRING..Sensor.Calibrado.co.4             4DE9      1F      31       1   .rodata1    
+     STRING..Temperatura.fora.do.5             4E08      20      32       1   .rodata1    
+     STRING..Operacao.Cancelada..6             4E28      15      21       1   .rodata1    
+     STRING...............AJUDA..7             4E3D      22      34       1   .rodata1    
+     STRING..1..AJUDA.8                        4E5F       A      10       1   .rodata1    
+     STRING..2..AMOSTRAGEM.9                   4E69       F      15       1   .rodata1    
+     STRING..3..APAGAR.10                      4E78       B      11       1   .rodata1    
+     STRING..4..CALIBRAR.11                    4E83       D      13       1   .rodata1    
+     STRING..5..DATA.12                        4E90       9       9       1   .rodata1    
+     STRING..6..IR.13                          4E99       7       7       1   .rodata1    
+     STRING..7..HORA.14                        4EA0       9       9       1   .rodata1    
+     STRING..8..MOSTRAR.15                     4EA9       C      12       1   .rodata1    
+     STRING..9..PARAR.16                       4EB5       A      10       1   .rodata1    
+     STRING..10..SENHA.17                      4EBF       B      11       1   .rodata1    
+     STRING..11..STATUS.18                     4ECA       C      12       1   .rodata1    
+     STRING..12..SAIR.19                       4ED6       A      10       1   .rodata1    
+     STRING......................20            4EE0      23      35       1   .rodata1    
+     STRING...............STATUS.21            4F03      23      35       1   .rodata1    
+     STRING..Amostragem..EXECUTA.22            4F26      21      33       1   .rodata1    
+     STRING..Amostragem..PARADA..23            4F47      15      21       1   .rodata1    
+     STRING..Horario..d..d..d..d.24            4F5C      1E      30       1   .rodata1    
+     STRING..Memoria..CHEIA..25                4F7A      11      17       1   .rodata1    
+     STRING..Memoria.Disponivel..26            4F8B      22      34       1   .rodata1    
+     STRING......................27            4FAD      24      36       1   .rodata1    
+     STRING..Informe.nova.data...28            4FD1      22      34       1   .rodata1    
+     STRING..d..d..d.29                        4FF3       9       9       1   .rodata1    
+     STRING..Data.definida.com.s.30            4FFC      25      37       1   .rodata1    
+     STRING..Formato.Invalido..31              5021      13      19       1   .rodata1    
+     STRING..Operacao.Cancelada..32            5034      15      21       1   .rodata1    
+     STRING..Informe.novo.horari.33            5049      26      38       1   .rodata1    
+     STRING..d..d..d..d.34                     506F       C      12       1   .rodata1    
+     STRING..Horario.definido.co.35            507B      2B      43       1   .rodata1    
+     STRING..Formato.Invalido..36              50A6      13      19       1   .rodata1    
+     STRING..Operacao.Cancelada..37            50B9      15      21       1   .rodata1    
+     STRING..Informe.sua.nova.Se.38            50CE      1A      26       1   .rodata1    
+     STRING..Senha.definida.com..39            50E8      1D      29       1   .rodata1    
+     STRING..Senha.muito.pequena.40            5105      2B      43       1   .rodata1    
+     STRING..Operacao.Cancelada..41            5130      15      21       1   .rodata1    
+     STRING..Informe.a.nova.Taxa.42            5145      36      54       1   .rodata1    
+     STRING..Taxa.de.Amostragem..43            517B      2A      42       1   .rodata1    
+     STRING..Taxa.de.Amostragem..44            51A5      27      39       1   .rodata1    
+     STRING..Operacao.Cancelada..45            51CC      15      21       1   .rodata1    
+     STRING......................46            51E1      45      69       1   .rodata1    
+     STRING..Amostra...d.graus...47            5226      46      70       1   .rodata1    
+     STRING..Evento...s...Horari.48            526C      2C      44       1   .rodata1    
+     STRING.FALTA.ENERGIA.49                   5298       E      14       1   .rodata1    
+     STRING.MEMORIA.CHEIA.50                   52A6       E      14       1   .rodata1    
+     STRING......................51            52B4      4B      75       1   .rodata1    
+     STRING......................52            52FF      30      48       1   .rodata1    
+     STRING...........DATALOGGER.53            532F      2C      44       1   .rodata1    
+     STRING......................54            535B      30      48       1   .rodata1    
+     STRING...Lucas.Cielo..Iury..55            538B      30      48       1   .rodata1    
+     STRING......................56            53BB      30      48       1   .rodata1    
+     STRING..Apagando.Memoria....57            53EB      15      21       1   .rodata1    
+     STRING..Memoria.Apagada..58               5400      12      18       1   .rodata1    
+     STRING.status.59                          5412       7       7       1   .rodata1    
+     STRING.ajuda.60                           5419       6       6       1   .rodata1    
+     STRING.senha.61                           541F       6       6       1   .rodata1    
+     STRING.amostragem.62                      5425       B      11       1   .rodata1    
+     STRING.parar.63                           5430       6       6       1   .rodata1    
+     STRING.mostrar.64                         5436       8       8       1   .rodata1    
+     STRING.apagar.65                          543E       7       7       1   .rodata1    
+     STRING..Apagando.Memoria....66            5445      15      21       1   .rodata1    
+     STRING..Memoria.Apagada..67               545A      12      18       1   .rodata1    
+     STRING.data.68                            546C       5       5       1   .rodata1    
+     STRING.hora.69                            5471       5       5       1   .rodata1    
+     STRING.calibrar.70                        5476       9       9       1   .rodata1    
+     STRING.sair.71                            547F       5       5       1   .rodata1    
+     STRING..Apagando.Memoria....72            5484      15      21       1   .rodata1    
+     STRING..Memoria.Apagada..73               5499      12      18       1   .rodata1    
+     STRING.ajuda.74                           54AB       6       6       1   .rodata1    
+     STRING.status.75                          54B1       7       7       1   .rodata1    
+     STRING.senha.76                           54B8       6       6       1   .rodata1    
+     STRING.amostragem.77                      54BE       B      11       1   .rodata1    
+     STRING.ir.78                              54C9       3       3       1   .rodata1    
+     STRING..Memoria.Cheia..79                 54CC      10      16       1   .rodata1    
+     STRING.mostrar.80                         54DC       8       8       1   .rodata1    
+     STRING.apagar.81                          54E4       7       7       1   .rodata1    
+     STRING..Apagando.Memoria....82            54EB      15      21       1   .rodata1    
+     STRING..Memoria.Apagada..83               5500      12      18       1   .rodata1    
+     STRING.data.84                            5512       5       5       1   .rodata1    
+     STRING.hora.85                            5517       5       5       1   .rodata1    
+     STRING.calibrar.86                        551C       9       9       1   .rodata1    
+     STRING.sair.87                            5525       5       5       1   .rodata1    
+     estado                                     2D9       2       2       3   .common     
+MODULE:                 -- amostragem_c.obj --
+- PROCEDURES:
+     configuraAmostragem                       29F3      15      21       1   .text       
+     calibrarAmostragem                        2A08      AB     171       1   .text       
+     paraAmostragem                            2AB3      14      20       9   .text       
+     iniciaAmostragem                          2AC7      41      65       1   .text       
+     amostra                                   2B08      E2     226       3   .text       
+     getAmostra                                2BEA       F      15       1   .text       
+- VARIABLES:
+     STRING..Parando.Amostragem..1             552A      17      23       1   .rodata1    
+     STRING..Amostragem.Parada..2              5541      14      20       1   .rodata1    
+     STRING..Iniciando.Amostrage.3             5555      19      25       1   .rodata1    
+     STRING..Amostragem.Iniciada.4             556E      16      22       1   .rodata1    
+     TAXA_AMOSTRAGEM                             A0       2       2       5   .data       
+     CANAL_AMOSTRAGEM                            A2       1       1       1   .data       
+     amostrando                                 2A5       1       1       5   .bss        
+     mCalibraF                                  2A6       2       2       2   .bss        
+     mCalibraQ                                  2A8       2       2       2   .bss        
+MODULE:                 -- botaoIRQ_c.obj --
+- PROCEDURES:
+     configuraIRQ                              2BF9       9       9       1   .text       
+     contaSegundo                              2C02      21      33       1   .text       
+     resetIRQ                                  2C23      18      24       5   .text       
+     interruptIRQ                              2C3B      2C      44       1   .text       
+- VARIABLES:
+     contando                                   2AA       1       1       3   .bss        
+     segundos                                   2AB       1       1       6   .bss        
+     mSegundos                                  2AC       1       1       4   .bss        
+     botaoApertado                              2AD       1       1       6   .bss        
+     botaoBloqueado                             2AE       1       1       4   .bss        
+     apertado                                   2AF       1       1       4   .bss        
+MODULE:                 -- eeprom_c.obj --
+- PROCEDURES:
+     configuraMem                              2C67      B1     177       1   .text       
+     delay                                     2D18      35      53       3   .text       
+     salvaAmostra                              2D4D      26      38       1   .text       
+     salvaHeader                               2D73      E3     227       7   .text       
+     limparMem                                 2E56      4B      75       2   .text       
+     auxMem                                    2EA1      4D      77       4   .text       
+     escreveMem                                2EEE      59      89       6   .text       
+     leMem                                     2F47      5D      93       3   .text       
+     leHeader                                  2FA4      C7     199       5   .text       
+     leDado                                    306B      22      34       2   .text       
+- VARIABLES:
+     STRING..Apagando.Bloco...d.1              5584      14      20       1   .rodata1    
+     address                                     A3       2       2       8   .data       
+     memCheia                                   2B0       1       1       9   .bss        
+     uAddr                                      2DB       2       2       6   .common     
+     uDados                                     2DD       2       2       6   .common     
+MODULE:                 -- serial_c.obj --
+- PROCEDURES:
+     autentica                                 308D      38      56       1   .text       
+     incSerial                                 30C5       7       7       1   .text       
+     incConf                                   30CC       7       7       1   .text       
+     verificaSerial                            30D3      BF     191       1   .text       
+     leSerial                                  3192      A2     162       8   .text       
+     escreveSerial                             3234      3E      62      56   .text       
+- VARIABLES:
+     STRING..Informe.sua.senha...2             5598      15      21       1   .rodata1    
+     STRING............Bem.Vindo.3             55AD      39      57       1   .rodata1    
+     STRING..Informe.o.Comando...4             55E6      15      21       1   .rodata1    
+     STRING..Senha.Errada..5                   55FB       F      15       1   .rodata1    
+     STRING..Operacao.Cancelada..6             560A      15      21       1   .rodata1    
+     STRING...7                                561F       2       2       1   .rodata1    
+     STRING...8                                5621       2       2       1   .rodata1    
+     STRING..Tempo.Esgotado..9                 5623      11      17       1   .rodata1    
+     STRING.....10                             5634       4       4       1   .rodata1    
+     STRING..Voce.precisa.estar..11            5638      2D      45       1   .rodata1    
+     STRING..12                                5665       1       1       1   .rodata1    
+     STRING..13                                5666       1       1       1   .rodata1    
+     STRING..Tempo.esgotado..14                5667      11      17       1   .rodata1    
+     STRING..15                                5678       1       1       1   .rodata1    
+     SENHA                                       A5     200     512       2   .data       
+     autenticado                                2B1       1       1       6   .bss        
+     segundoSerial                              2B2       1       1       3   .bss        
+     segundoConf                                2B3       1       1       3   .bss        
+     buffer                                     2DF     200     512      54   .common     
+MODULE:                 -- timer_c.obj --
+- PROCEDURES:
+     conta                                     3272      73     115       4   .text       
+     desligaTimer                              32E5      19      25       6   .text       
+     timer1                                    32FE      1B      27       1   .text       
+     timer2                                    3319      1B      27       1   .text       
+     timer3                                    3334      1B      27       1   .text       
+- VARIABLES:
+     tempo1                                     2B4       2       2       2   .bss        
+     tempo2                                     2B6       2       2       2   .bss        
+     tempo3                                     2B8       2       2       2   .bss        
+     contador1                                  2BA       2       2       4   .bss        
+     contador2                                  2BC       2       2       4   .bss        
+     contador3                                  2BE       2       2       4   .bss        
+     funcao1                                    2C0       2       2       2   .bss        
+     funcao2                                    2C2       2       2       2   .bss        
+     funcao3                                    2C4       2       2       2   .bss        
+MODULE:                 -- start08_c.obj --
+- PROCEDURES:
+     loadByte                                  334F       E      14       5   .text       
+     Init                                      335D      6D     109       1   .text       
+     _Startup                                  33CA       9       9       1   .text       
+- VARIABLES:
+     _startupData                              2136       6       6       4   .startData  
+- LABELS:
+     __SEG_END_SSTACK                           6E3       0       0       1               
+MODULE:                 -- ASerial_c.obj --
+- PROCEDURES:
+     ASerial_RecvChar                          33D3      26      38       1   .text       
+     ASerial_SendChar                          33F9      12      18       1   .text       
+     ASerial_Init                              340B      1F      31       1   .text       
+- VARIABLES:
+MODULE:                 -- Cpu_c.obj --
+- PROCEDURES:
+     Cpu_Interrupt                             2080       4       4      25   .init       
+     _EntryPoint                               2084      52      82       1   .init       
+     PE_low_level_init                         20D6      60      96       1   .init       
+- VARIABLES:
+     NVPROT_INIT                               FFBD       1       1       0   .abs_section_ffbd
+     NVOPT_INIT                                FFBF       1       1       0   .abs_section_ffbf
+     CCR_reg                                    4DF       1       1       6   .common     
+     CCR_lock                                   4E0       1       1      13   .common     
+MODULE:                 -- IO_Map_c.obj --
+- PROCEDURES:
+- VARIABLES:
+     _PTAD                                        0       1       1       1   .abs_section_0
+     _PTADD                                       1       1       1       0   .abs_section_1
+     _PTBD                                        2       1       1       0   .abs_section_2
+     _PTBDD                                       3       1       1       0   .abs_section_3
+     _PTCD                                        4       1       1       1   .abs_section_4
+     _PTCDD                                       5       1       1       2   .abs_section_5
+     _PTDD                                        6       1       1       0   .abs_section_6
+     _PTDDD                                       7       1       1       0   .abs_section_7
+     _PTED                                        8       1       1       0   .abs_section_8
+     _PTEDD                                       9       1       1       0   .abs_section_9
+     _PTFD                                        A       1       1       0   .abs_section_a
+     _PTFDD                                       B       1       1       0   .abs_section_b
+     _KBI1SC                                      C       1       1       0   .abs_section_c
+     _KBI1PE                                      D       1       1       0   .abs_section_d
+     _KBI1ES                                      E       1       1       0   .abs_section_e
+     _IRQSC                                       F       1       1       5   .abs_section_f
+     _ADCSC1                                     10       1       1      14   .abs_section_10
+     _ADCSC2                                     11       1       1       1   .abs_section_11
+     _ADCCFG                                     16       1       1       1   .abs_section_16
+     _APCTL1                                     17       1       1       0   .abs_section_17
+     _APCTL2                                     18       1       1       0   .abs_section_18
+     _APCTL3                                     19       1       1       0   .abs_section_19
+     _ACMP1SC                                    1A       1       1       0   .abs_section_1a
+     _ACMP2SC                                    1B       1       1       0   .abs_section_1b
+     _PTGD                                       1C       1       1       0   .abs_section_1c
+     _PTGDD                                      1D       1       1       0   .abs_section_1d
+     _PTHD                                       1E       1       1       0   .abs_section_1e
+     _PTHDD                                      1F       1       1       0   .abs_section_1f
+     _SCI1C1                                     22       1       1       0   .abs_section_22
+     _SCI1C2                                     23       1       1       0   .abs_section_23
+     _SCI1S1                                     24       1       1       0   .abs_section_24
+     _SCI1S2                                     25       1       1       0   .abs_section_25
+     _SCI1C3                                     26       1       1       0   .abs_section_26
+     _SCI1D                                      27       1       1       0   .abs_section_27
+     _SPI1C1                                     28       1       1       0   .abs_section_28
+     _SPI1C2                                     29       1       1       0   .abs_section_29
+     _SPI1BR                                     2A       1       1       0   .abs_section_2a
+     _SPI1S                                      2B       1       1       0   .abs_section_2b
+     _SPI1D                                      2D       1       1       0   .abs_section_2d
+     _PTJD                                       2E       1       1       0   .abs_section_2e
+     _PTJDD                                      2F       1       1       0   .abs_section_2f
+     _IIC1A                                      30       1       1       0   .abs_section_30
+     _IIC1F                                      31       1       1       0   .abs_section_31
+     _IIC1C1                                     32       1       1       0   .abs_section_32
+     _IIC1S                                      33       1       1       0   .abs_section_33
+     _IIC1D                                      34       1       1       0   .abs_section_34
+     _IIC1C2                                     35       1       1       0   .abs_section_35
+     _ICSC1                                      38       1       1       1   .abs_section_38
+     _ICSC2                                      39       1       1       1   .abs_section_39
+     _ICSTRM                                     3A       1       1       1   .abs_section_3a
+     _ICSSC                                      3B       1       1       5   .abs_section_3b
+     _KBI2SC                                     3C       1       1       0   .abs_section_3c
+     _KBI2PE                                     3D       1       1       0   .abs_section_3d
+     _KBI2ES                                     3E       1       1       0   .abs_section_3e
+     _TPM1SC                                     40       1       1       4   .abs_section_40
+     _TPM1C0SC                                   45       1       1       0   .abs_section_45
+     _TPM1C1SC                                   48       1       1       0   .abs_section_48
+     _TPM1C2SC                                   4B       1       1       0   .abs_section_4b
+     _TPM2SC                                     50       1       1       4   .abs_section_50
+     _TPM2C0SC                                   55       1       1       0   .abs_section_55
+     _TPM2C1SC                                   58       1       1       0   .abs_section_58
+     _TPM2C2SC                                   5B       1       1       0   .abs_section_5b
+     _TPM3SC                                     60       1       1       9   .abs_section_60
+     _TPM3C0SC                                   65       1       1       0   .abs_section_65
+     _TPM3C1SC                                   68       1       1       0   .abs_section_68
+     _TPM3C2SC                                   6B       1       1       0   .abs_section_6b
+     _TPM3C3SC                                   6E       1       1       0   .abs_section_6e
+     _TPM3C4SC                                   71       1       1       0   .abs_section_71
+     _TPM3C5SC                                   74       1       1       0   .abs_section_74
+     _PPAGE                                      78       1       1       0   .abs_section_78
+     _LAP2                                       79       1       1       0   .abs_section_79
+     _LAP1                                       7A       1       1       0   .abs_section_7a
+     _LAP0                                       7B       1       1       0   .abs_section_7b
+     _LWP                                        7C       1       1       0   .abs_section_7c
+     _LBP                                        7D       1       1       0   .abs_section_7d
+     _LB                                         7E       1       1       0   .abs_section_7e
+     _LAPAB                                      7F       1       1       0   .abs_section_7f
+     _SRS                                      1800       1       1      10   .abs_section_1800
+     _SBDFR                                    1801       1       1       0   .abs_section_1801
+     _SOPT1                                    1802       1       1       1   .abs_section_1802
+     _SOPT2                                    1803       1       1       1   .abs_section_1803
+     _SPMSC1                                   1808       1       1       3   .abs_section_1808
+     _SPMSC2                                   1809       1       1       3   .abs_section_1809
+     _SPMSC3                                   180B       1       1       2   .abs_section_180b
+     _SCGC1                                    180E       1       1       1   .abs_section_180e
+     _SCGC2                                    180F       1       1       1   .abs_section_180f
+     _DBGCAX                                   1818       1       1       0   .abs_section_1818
+     _DBGCBX                                   1819       1       1       0   .abs_section_1819
+     _DBGCCX                                   181A       1       1       0   .abs_section_181a
+     _DBGFX                                    181B       1       1       0   .abs_section_181b
+     _DBGC                                     181C       1       1       0   .abs_section_181c
+     _DBGT                                     181D       1       1       0   .abs_section_181d
+     _DBGS                                     181E       1       1       0   .abs_section_181e
+     _DBGCNT                                   181F       1       1       0   .abs_section_181f
+     _FCDIV                                    1820       1       1       0   .abs_section_1820
+     _FOPT                                     1821       1       1       0   .abs_section_1821
+     _FCNFG                                    1823       1       1       0   .abs_section_1823
+     _FPROT                                    1824       1       1       0   .abs_section_1824
+     _FSTAT                                    1825       1       1       0   .abs_section_1825
+     _FCMD                                     1826       1       1       0   .abs_section_1826
+     _RTCSC                                    1830       1       1       4   .abs_section_1830
+     _RTCCNT                                   1831       1       1       0   .abs_section_1831
+     _RTCMOD                                   1832       1       1       1   .abs_section_1832
+     _SPI2C1                                   1838       1       1       0   .abs_section_1838
+     _SPI2C2                                   1839       1       1       0   .abs_section_1839
+     _SPI2BR                                   183A       1       1       0   .abs_section_183a
+     _SPI2S                                    183B       1       1       0   .abs_section_183b
+     _SPI2D                                    183D       1       1       0   .abs_section_183d
+     _PTAPE                                    1840       1       1       0   .abs_section_1840
+     _PTASE                                    1841       1       1       1   .abs_section_1841
+     _PTADS                                    1842       1       1       1   .abs_section_1842
+     _PTBPE                                    1844       1       1       0   .abs_section_1844
+     _PTBSE                                    1845       1       1       1   .abs_section_1845
+     _PTBDS                                    1846       1       1       1   .abs_section_1846
+     _PTCPE                                    1848       1       1       0   .abs_section_1848
+     _PTCSE                                    1849       1       1       1   .abs_section_1849
+     _PTCDS                                    184A       1       1       1   .abs_section_184a
+     _PTDPE                                    184C       1       1       0   .abs_section_184c
+     _PTDSE                                    184D       1       1       1   .abs_section_184d
+     _PTDDS                                    184E       1       1       1   .abs_section_184e
+     _PTEPE                                    1850       1       1       0   .abs_section_1850
+     _PTESE                                    1851       1       1       1   .abs_section_1851
+     _PTEDS                                    1852       1       1       1   .abs_section_1852
+     _PTFPE                                    1854       1       1       0   .abs_section_1854
+     _PTFSE                                    1855       1       1       1   .abs_section_1855
+     _PTFDS                                    1856       1       1       1   .abs_section_1856
+     _PTGPE                                    1858       1       1       0   .abs_section_1858
+     _PTGSE                                    1859       1       1       1   .abs_section_1859
+     _PTGDS                                    185A       1       1       1   .abs_section_185a
+     _PTHPE                                    185C       1       1       0   .abs_section_185c
+     _PTHSE                                    185D       1       1       1   .abs_section_185d
+     _PTHDS                                    185E       1       1       1   .abs_section_185e
+     _PTJPE                                    1860       1       1       0   .abs_section_1860
+     _PTJSE                                    1861       1       1       1   .abs_section_1861
+     _PTJDS                                    1862       1       1       1   .abs_section_1862
+     _IIC2A                                    1868       1       1       0   .abs_section_1868
+     _IIC2F                                    1869       1       1       1   .abs_section_1869
+     _IIC2C1                                   186A       1       1      10   .abs_section_186a
+     _IIC2S                                    186B       1       1      11   .abs_section_186b
+     _IIC2D                                    186C       1       1       6   .abs_section_186c
+     _IIC2C2                                   186D       1       1       0   .abs_section_186d
+     _SCI2C1                                   1872       1       1       1   .abs_section_1872
+     _SCI2C2                                   1873       1       1       1   .abs_section_1873
+     _SCI2S1                                   1874       1       1       5   .abs_section_1874
+     _SCI2S2                                   1875       1       1       1   .abs_section_1875
+     _SCI2C3                                   1876       1       1       1   .abs_section_1876
+     _SCI2D                                    1877       1       1       2   .abs_section_1877
+     _PTCSET                                   1878       1       1       0   .abs_section_1878
+     _PTESET                                   1879       1       1       0   .abs_section_1879
+     _PTCCLR                                   187A       1       1       0   .abs_section_187a
+     _PTECLR                                   187B       1       1       0   .abs_section_187b
+     _PTCTOG                                   187C       1       1       0   .abs_section_187c
+     _PTETOG                                   187D       1       1       0   .abs_section_187d
+     _ADCR                                       12       2       2       4   .abs_section_12
+     _ADCCV                                      14       2       2       0   .abs_section_14
+     _SCI1BD                                     20       2       2       0   .abs_section_20
+     _TPM1CNT                                    41       2       2       1   .abs_section_41
+     _TPM1MOD                                    43       2       2       1   .abs_section_43
+     _TPM1C0V                                    46       2       2       0   .abs_section_46
+     _TPM1C1V                                    49       2       2       0   .abs_section_49
+     _TPM1C2V                                    4C       2       2       0   .abs_section_4c
+     _TPM2CNT                                    51       2       2       1   .abs_section_51
+     _TPM2MOD                                    53       2       2       1   .abs_section_53
+     _TPM2C0V                                    56       2       2       0   .abs_section_56
+     _TPM2C1V                                    59       2       2       0   .abs_section_59
+     _TPM2C2V                                    5C       2       2       0   .abs_section_5c
+     _TPM3CNT                                    61       2       2       3   .abs_section_61
+     _TPM3MOD                                    63       2       2       2   .abs_section_63
+     _TPM3C0V                                    66       2       2       0   .abs_section_66
+     _TPM3C1V                                    69       2       2       0   .abs_section_69
+     _TPM3C2V                                    6C       2       2       0   .abs_section_6c
+     _TPM3C3V                                    6F       2       2       0   .abs_section_6f
+     _TPM3C4V                                    72       2       2       0   .abs_section_72
+     _TPM3C5V                                    75       2       2       0   .abs_section_75
+     _SDID                                     1806       2       2       0   .abs_section_1806
+     _DBGCA                                    1810       2       2       0   .abs_section_1810
+     _DBGCB                                    1812       2       2       0   .abs_section_1812
+     _DBGCC                                    1814       2       2       0   .abs_section_1814
+     _DBGF                                     1816       2       2       0   .abs_section_1816
+     _SCI2BD                                   1870       2       2       2   .abs_section_1870
+MODULE:                 -- Vectors_c.obj --
+- PROCEDURES:
+- VARIABLES:
+     _vect                                     FFC0      40      64       0   .abs_section_ffc0
+MODULE:                 -- relogio_c.obj --
+- PROCEDURES:
+     HWEnDi                                    342A      12      18       3   .text       
+     relogio_SetTime                           343C      98     152       3   .text       
+     relogio_GetTime                           34D4      96     150       4   .text       
+     relogio_SetDate                           356A      8C     140       3   .text       
+     relogio_GetDate                           35F6      3D      61       4   .text       
+     relogio_InitTD                            3633      2D      45       1   .text       
+     relogio_Interrupt                         3660      AB     171       2   .text       
+- VARIABLES:
+     ULY                                       4D2E       C      12       2   .rodata     
+     LY                                        4D3A       C      12       2   .rodata     
+     EnUser                                     2C6       1       1       6   .bss        
+     CntDay                                     2C7       1       1       5   .bss        
+     CntMonth                                   2C8       1       1       6   .bss        
+     CntYear                                    2C9       2       2       5   .bss        
+     TotalHthL                                  2CB       4       4       6   .bss        
+     TotalHthH                                  2CF       4       4       6   .bss        
+MODULE:                 -- ctype.c.o (ansiis.lib) --
+- PROCEDURES:
+     isdigit                                   370B       E      14       1   .text       
+     isspace                                   3719      1E      30       3   .text       
+     tolower                                   3737      1C      28       1   .text       
+     toupper                                   3753      1C      28       3   .text       
+- VARIABLES:
+MODULE:                 -- printf.c.o (ansiis.lib) --
+- PROCEDURES:
+     vprintf                                   376F     60B    1547      39   .text       
+     _out                                      3D7A       D      13       9   .text       
+     deposit_char                              3D87      15      21       1   .text       
+     sprintf                                   3D9C      3B      59       8   .text       
+- VARIABLES:
+     pow10                                     4D46      28      40       4   .rodata     
+     pow16                                     4D6E      20      32       4   .rodata     
+     pow8                                      4D8E      2C      44       4   .rodata     
+     pbuf                                       2D3       6       6      14   .bss        
+MODULE:                 -- rtshc08.c.o (ansiis.lib) --
+- PROCEDURES:
+     _PUSH_ARGS_L                              3DD7      20      32       3   .text       
+     _ENTER_UNARY_L                            3DF7      29      41       2   .text       
+     _ENTER_BINARY_L                           3E20      16      22       5   .text       
+     _ENTER_BINARY_L_RC                        3E36      19      25       6   .text       
+     _ENTER_BINARY_L_LC                        3E4F      1A      26       3   .text       
+     _IDIVMOD                                  3E69      69     105       3   .text       
+     _SPLITSIGN                                3ED2      1C      28       1   .text       
+     _LADD_k_is_k_plus_j                       3EEE      1F      31       2   .text       
+     _k_is_k_plus_j_l                          3F0D      1E      30       2   .text       
+     _k_is_k_plus_j_i                          3F2B      12      18       3   .text       
+     _LSUB_k_is_k_minus_j                      3F3D      1F      31       3   .text       
+     _LMUL_k_is_k_mul_j                        3F5C      81     129       2   .text       
+     _LDIVMOD                                  3FDD      A4     164       3   .text       
+     _NEG_L_HX                                 4081      13      19       2   .text       
+     _ABS_L_HX                                 4094       6       6       2   .text       
+     _SPLITSIGN_L                              409A       A      10       1   .text       
+     _LMODU_k_is_k_mod_j                       40A4       B      11       1   .text       
+     _LDIVU_k_is_k_div_j                       40AF      17      23       3   .text       
+     _LDIVS_k_is_k_div_j                       40C6      27      39       1   .text       
+     _LCMP_k_rel_j                             40ED      1F      31       2   .text       
+     _IMUL_STAR08                              410C      27      39       5   .text       
+     _IDIVS_STAR08                             4133      1B      27       2   .text       
+     _IDIVU_STAR08                             414E       D      13       4   .text       
+     _IMODU_STAR08                             415B      10      16       4   .text       
+     _IDIVU_8                                  416B       E      14       1   .text       
+     _IMODU_8                                  4179      12      18       1   .text       
+     _LINC                                     418B      16      22       1   .text       
+     _LNEG                                     41A1      1C      28       2   .text       
+     _LADD                                     41BD       6       6       4   .text       
+     _LADD_RC                                  41C3       6       6       1   .text       
+     _LSUB                                     41C9       6       6       1   .text       
+     _LSUB_LC                                  41CF       6       6       2   .text       
+     _LSUB_RC                                  41D5       6       6       1   .text       
+     _LMUL                                     41DB       6       6       1   .text       
+     _LMUL_RC                                  41E1       6       6       4   .text       
+     _LDIVS_LC                                 41E7       6       6       2   .text       
+     _LDIVU                                    41ED       6       6       1   .text       
+     _LDIVU_LC                                 41F3       6       6       4   .text       
+     _LDIVU_RC                                 41F9       6       6       3   .text       
+     _LMODU_RC                                 41FF       6       6       2   .text       
+     _LCMP                                     4205       6       6       6   .text       
+     _LCMP_RC                                  420B       6       6       1   .text       
+     _COPY                                     4211      30      48       7   .text       
+     _POP32                                    4241      1A      26      15   .text       
+     _SEXT16_32                                425B       D      13       8   .text       
+     _Jump_Table_Addr                          4268      16      22       2   .text       
+     _Jump_Table_Header_Offset                 427E      24      36       4   .text       
+     _Search_Table_8_Addr                      42A2      21      33       2   .text       
+     _Search_Table_8_Offset                    42C3      25      37       1   .text       
+     _PUSH_CC                                  42E8       F      15       2   .text       
+     _POP_CC                                   42F7       F      15       2   .text       
+- VARIABLES:
+     errno                                      4E1       2       2       2   .common     
+MODULE:                 -- scanf.c.o (ansiis.lib) --
+- PROCEDURES:
+     _getNum                                   4306      43      67       1   .text       
+     _copyList                                 4349      E8     232       1   .text       
+     vsscanf                                   4431     485    1157      49   .text       
+     sscanf                                    48B6      1B      27       2   .text       
+- VARIABLES:
+MODULE:                 -- stdlib.c.o (ansiis.lib) --
+- PROCEDURES:
+     CheckCharWithBase                         48D1      50      80       2   .text       
+     _strtoul                                  4921     1FF     511       9   .text       
+     _strtol                                   4B20     152     338       4   .text       
+     strtol                                    4C72      2D      45       2   .text       
+- VARIABLES:
+MODULE:                 -- string.c.o (ansiis.lib) --
+- PROCEDURES:
+     strlen                                    4C9F      27      39       3   .text       
+     strcpy                                    4CC6      29      41       4   .text       
+     strcmp                                    4CEF      3F      63      26   .text       
+- VARIABLES:
+
+*********************************************************************************************
+MODULE STATISTIC
+  Name                                      Data   Code  Const
+---------------------------------------------------------------------------------------------
+  ProcessorExpert_c.obj                        2   2223   1904
+  amostragem_c.obj                             8    518     90
+  botaoIRQ_c.obj                               6    110      0
+  eeprom_c.obj                                 7   1062     20
+  serial_c.obj                              1027    485    225
+  timer_c.obj                                 18    221      0
+  start08_c.obj                                0    132      0
+  ASerial_c.obj                                0     87      0
+  Cpu_c.obj                                    2    182      2
+  IO_Map_c.obj                               207      0      0
+  Vectors_c.obj                                0      0     64
+  relogio_c.obj                               13    737     24
+  ctype.c.o (ansiis.lib)                       0    100      0
+  printf.c.o (ansiis.lib)                      6   1640    116
+  rtshc08.c.o (ansiis.lib)                     2   1327      0
+  scanf.c.o (ansiis.lib)                       0   1483      0
+  stdlib.c.o (ansiis.lib)                      0    974      0
+  string.c.o (ansiis.lib)                      0    143      0
+  other                                      512     14     21
+
+*********************************************************************************************
+SECTION USE IN OBJECT-ALLOCATION SECTION
+---------------------------------------------------------------------------------------------
+SECTION: ".text"
+  configuraLVD tensaoBaixa sair calibrar ajuda status setDate setTime setSenha 
+  setAmostragem mostrar main configuraAmostragem calibrarAmostragem 
+  paraAmostragem iniciaAmostragem amostra getAmostra configuraIRQ contaSegundo 
+  resetIRQ interruptIRQ configuraMem delay salvaAmostra salvaHeader limparMem 
+  auxMem escreveMem leMem leHeader leDado autentica incSerial incConf 
+  verificaSerial leSerial escreveSerial conta desligaTimer timer1 timer2 timer3 
+  loadByte Init _Startup ASerial_RecvChar ASerial_SendChar ASerial_Init HWEnDi 
+  relogio_SetTime relogio_GetTime relogio_SetDate relogio_GetDate 
+  relogio_InitTD relogio_Interrupt isdigit isspace tolower toupper vprintf _out 
+  deposit_char sprintf _PUSH_ARGS_L _ENTER_UNARY_L _ENTER_BINARY_L 
+  _ENTER_BINARY_L_RC _ENTER_BINARY_L_LC _IDIVMOD _SPLITSIGN _LADD_k_is_k_plus_j 
+  _k_is_k_plus_j_l _k_is_k_plus_j_i _LSUB_k_is_k_minus_j _LMUL_k_is_k_mul_j 
+  _LDIVMOD _NEG_L_HX _ABS_L_HX _SPLITSIGN_L _LMODU_k_is_k_mod_j 
+  _LDIVU_k_is_k_div_j _LDIVS_k_is_k_div_j _LCMP_k_rel_j _IMUL_STAR08 
+  _IDIVS_STAR08 _IDIVU_STAR08 _IMODU_STAR08 _IDIVU_8 _IMODU_8 _LINC _LNEG _LADD 
+  _LADD_RC _LSUB _LSUB_LC _LSUB_RC _LMUL _LMUL_RC _LDIVS_LC _LDIVU _LDIVU_LC 
+  _LDIVU_RC _LMODU_RC _LCMP _LCMP_RC _COPY _POP32 _SEXT16_32 _Jump_Table_Addr 
+  _Jump_Table_Header_Offset _Search_Table_8_Addr _Search_Table_8_Offset 
+  _PUSH_CC _POP_CC _getNum _copyList vsscanf sscanf CheckCharWithBase _strtoul 
+  _strtol strtol strlen strcpy strcmp 
+SECTION: ".data"
+  TAXA_AMOSTRAGEM CANAL_AMOSTRAGEM address SENHA 
+SECTION: ".bss"
+  amostrando mCalibraF mCalibraQ contando segundos mSegundos botaoApertado 
+  botaoBloqueado apertado memCheia autenticado segundoSerial segundoConf tempo1 
+  tempo2 tempo3 contador1 contador2 contador3 funcao1 funcao2 funcao3 EnUser 
+  CntDay CntMonth CntYear TotalHthL TotalHthH pbuf 
+SECTION: ".init"
+  Cpu_Interrupt _EntryPoint PE_low_level_init 
+SECTION: ".rodata"
+  ULY LY pow10 pow16 pow8 
+SECTION: ".rodata1"
+  STRING.e.1 STRING..Sessao.Finalizada..2 STRING..Informe.a.temperatu.3 
+  STRING..Sensor.Calibrado.co.4 STRING..Temperatura.fora.do.5 
+  STRING..Operacao.Cancelada..6 STRING...............AJUDA..7 
+  STRING..1..AJUDA.8 STRING..2..AMOSTRAGEM.9 STRING..3..APAGAR.10 
+  STRING..4..CALIBRAR.11 STRING..5..DATA.12 STRING..6..IR.13 STRING..7..HORA.14 
+  STRING..8..MOSTRAR.15 STRING..9..PARAR.16 STRING..10..SENHA.17 
+  STRING..11..STATUS.18 STRING..12..SAIR.19 STRING......................20 
+  STRING...............STATUS.21 STRING..Amostragem..EXECUTA.22 
+  STRING..Amostragem..PARADA..23 STRING..Horario..d..d..d..d.24 
+  STRING..Memoria..CHEIA..25 STRING..Memoria.Disponivel..26 
+  STRING......................27 STRING..Informe.nova.data...28 
+  STRING..d..d..d.29 STRING..Data.definida.com.s.30 
+  STRING..Formato.Invalido..31 STRING..Operacao.Cancelada..32 
+  STRING..Informe.novo.horari.33 STRING..d..d..d..d.34 
+  STRING..Horario.definido.co.35 STRING..Formato.Invalido..36 
+  STRING..Operacao.Cancelada..37 STRING..Informe.sua.nova.Se.38 
+  STRING..Senha.definida.com..39 STRING..Senha.muito.pequena.40 
+  STRING..Operacao.Cancelada..41 STRING..Informe.a.nova.Taxa.42 
+  STRING..Taxa.de.Amostragem..43 STRING..Taxa.de.Amostragem..44 
+  STRING..Operacao.Cancelada..45 STRING......................46 
+  STRING..Amostra...d.graus...47 STRING..Evento...s...Horari.48 
+  STRING.FALTA.ENERGIA.49 STRING.MEMORIA.CHEIA.50 
+  STRING......................51 STRING......................52 
+  STRING...........DATALOGGER.53 STRING......................54 
+  STRING...Lucas.Cielo..Iury..55 STRING......................56 
+  STRING..Apagando.Memoria....57 STRING..Memoria.Apagada..58 STRING.status.59 
+  STRING.ajuda.60 STRING.senha.61 STRING.amostragem.62 STRING.parar.63 
+  STRING.mostrar.64 STRING.apagar.65 STRING..Apagando.Memoria....66 
+  STRING..Memoria.Apagada..67 STRING.data.68 STRING.hora.69 STRING.calibrar.70 
+  STRING.sair.71 STRING..Apagando.Memoria....72 STRING..Memoria.Apagada..73 
+  STRING.ajuda.74 STRING.status.75 STRING.senha.76 STRING.amostragem.77 
+  STRING.ir.78 STRING..Memoria.Cheia..79 STRING.mostrar.80 STRING.apagar.81 
+  STRING..Apagando.Memoria....82 STRING..Memoria.Apagada..83 STRING.data.84 
+  STRING.hora.85 STRING.calibrar.86 STRING.sair.87 
+  STRING..Parando.Amostragem..1 STRING..Amostragem.Parada..2 
+  STRING..Iniciando.Amostrage.3 STRING..Amostragem.Iniciada.4 
+  STRING..Apagando.Bloco...d.1 STRING..Informe.sua.senha...2 
+  STRING............Bem.Vindo.3 STRING..Informe.o.Comando...4 
+  STRING..Senha.Errada..5 STRING..Operacao.Cancelada..6 STRING...7 STRING...8 
+  STRING..Tempo.Esgotado..9 STRING.....10 STRING..Voce.precisa.estar..11 
+  STRING..12 STRING..13 STRING..Tempo.esgotado..14 STRING..15 
+SECTION: ".common"
+  estado uAddr uDados buffer CCR_reg CCR_lock errno 
+SECTION: ".abs_section_ffbd"
+  NVPROT_INIT 
+SECTION: ".abs_section_ffbf"
+  NVOPT_INIT 
+SECTION: ".abs_section_0"
+  _PTAD 
+SECTION: ".abs_section_1"
+  _PTADD 
+SECTION: ".abs_section_2"
+  _PTBD 
+SECTION: ".abs_section_3"
+  _PTBDD 
+SECTION: ".abs_section_4"
+  _PTCD 
+SECTION: ".abs_section_5"
+  _PTCDD 
+SECTION: ".abs_section_6"
+  _PTDD 
+SECTION: ".abs_section_7"
+  _PTDDD 
+SECTION: ".abs_section_8"
+  _PTED 
+SECTION: ".abs_section_9"
+  _PTEDD 
+SECTION: ".abs_section_a"
+  _PTFD 
+SECTION: ".abs_section_b"
+  _PTFDD 
+SECTION: ".abs_section_c"
+  _KBI1SC 
+SECTION: ".abs_section_d"
+  _KBI1PE 
+SECTION: ".abs_section_e"
+  _KBI1ES 
+SECTION: ".abs_section_f"
+  _IRQSC 
+SECTION: ".abs_section_10"
+  _ADCSC1 
+SECTION: ".abs_section_11"
+  _ADCSC2 
+SECTION: ".abs_section_16"
+  _ADCCFG 
+SECTION: ".abs_section_17"
+  _APCTL1 
+SECTION: ".abs_section_18"
+  _APCTL2 
+SECTION: ".abs_section_19"
+  _APCTL3 
+SECTION: ".abs_section_1a"
+  _ACMP1SC 
+SECTION: ".abs_section_1b"
+  _ACMP2SC 
+SECTION: ".abs_section_1c"
+  _PTGD 
+SECTION: ".abs_section_1d"
+  _PTGDD 
+SECTION: ".abs_section_1e"
+  _PTHD 
+SECTION: ".abs_section_1f"
+  _PTHDD 
+SECTION: ".abs_section_22"
+  _SCI1C1 
+SECTION: ".abs_section_23"
+  _SCI1C2 
+SECTION: ".abs_section_24"
+  _SCI1S1 
+SECTION: ".abs_section_25"
+  _SCI1S2 
+SECTION: ".abs_section_26"
+  _SCI1C3 
+SECTION: ".abs_section_27"
+  _SCI1D 
+SECTION: ".abs_section_28"
+  _SPI1C1 
+SECTION: ".abs_section_29"
+  _SPI1C2 
+SECTION: ".abs_section_2a"
+  _SPI1BR 
+SECTION: ".abs_section_2b"
+  _SPI1S 
+SECTION: ".abs_section_2d"
+  _SPI1D 
+SECTION: ".abs_section_2e"
+  _PTJD 
+SECTION: ".abs_section_2f"
+  _PTJDD 
+SECTION: ".abs_section_30"
+  _IIC1A 
+SECTION: ".abs_section_31"
+  _IIC1F 
+SECTION: ".abs_section_32"
+  _IIC1C1 
+SECTION: ".abs_section_33"
+  _IIC1S 
+SECTION: ".abs_section_34"
+  _IIC1D 
+SECTION: ".abs_section_35"
+  _IIC1C2 
+SECTION: ".abs_section_38"
+  _ICSC1 
+SECTION: ".abs_section_39"
+  _ICSC2 
+SECTION: ".abs_section_3a"
+  _ICSTRM 
+SECTION: ".abs_section_3b"
+  _ICSSC 
+SECTION: ".abs_section_3c"
+  _KBI2SC 
+SECTION: ".abs_section_3d"
+  _KBI2PE 
+SECTION: ".abs_section_3e"
+  _KBI2ES 
+SECTION: ".abs_section_40"
+  _TPM1SC 
+SECTION: ".abs_section_45"
+  _TPM1C0SC 
+SECTION: ".abs_section_48"
+  _TPM1C1SC 
+SECTION: ".abs_section_4b"
+  _TPM1C2SC 
+SECTION: ".abs_section_50"
+  _TPM2SC 
+SECTION: ".abs_section_55"
+  _TPM2C0SC 
+SECTION: ".abs_section_58"
+  _TPM2C1SC 
+SECTION: ".abs_section_5b"
+  _TPM2C2SC 
+SECTION: ".abs_section_60"
+  _TPM3SC 
+SECTION: ".abs_section_65"
+  _TPM3C0SC 
+SECTION: ".abs_section_68"
+  _TPM3C1SC 
+SECTION: ".abs_section_6b"
+  _TPM3C2SC 
+SECTION: ".abs_section_6e"
+  _TPM3C3SC 
+SECTION: ".abs_section_71"
+  _TPM3C4SC 
+SECTION: ".abs_section_74"
+  _TPM3C5SC 
+SECTION: ".abs_section_78"
+  _PPAGE 
+SECTION: ".abs_section_79"
+  _LAP2 
+SECTION: ".abs_section_7a"
+  _LAP1 
+SECTION: ".abs_section_7b"
+  _LAP0 
+SECTION: ".abs_section_7c"
+  _LWP 
+SECTION: ".abs_section_7d"
+  _LBP 
+SECTION: ".abs_section_7e"
+  _LB 
+SECTION: ".abs_section_7f"
+  _LAPAB 
+SECTION: ".abs_section_1800"
+  _SRS 
+SECTION: ".abs_section_1801"
+  _SBDFR 
+SECTION: ".abs_section_1802"
+  _SOPT1 
+SECTION: ".abs_section_1803"
+  _SOPT2 
+SECTION: ".abs_section_1808"
+  _SPMSC1 
+SECTION: ".abs_section_1809"
+  _SPMSC2 
+SECTION: ".abs_section_180b"
+  _SPMSC3 
+SECTION: ".abs_section_180e"
+  _SCGC1 
+SECTION: ".abs_section_180f"
+  _SCGC2 
+SECTION: ".abs_section_1818"
+  _DBGCAX 
+SECTION: ".abs_section_1819"
+  _DBGCBX 
+SECTION: ".abs_section_181a"
+  _DBGCCX 
+SECTION: ".abs_section_181b"
+  _DBGFX 
+SECTION: ".abs_section_181c"
+  _DBGC 
+SECTION: ".abs_section_181d"
+  _DBGT 
+SECTION: ".abs_section_181e"
+  _DBGS 
+SECTION: ".abs_section_181f"
+  _DBGCNT 
+SECTION: ".abs_section_1820"
+  _FCDIV 
+SECTION: ".abs_section_1821"
+  _FOPT 
+SECTION: ".abs_section_1823"
+  _FCNFG 
+SECTION: ".abs_section_1824"
+  _FPROT 
+SECTION: ".abs_section_1825"
+  _FSTAT 
+SECTION: ".abs_section_1826"
+  _FCMD 
+SECTION: ".abs_section_1830"
+  _RTCSC 
+SECTION: ".abs_section_1831"
+  _RTCCNT 
+SECTION: ".abs_section_1832"
+  _RTCMOD 
+SECTION: ".abs_section_1838"
+  _SPI2C1 
+SECTION: ".abs_section_1839"
+  _SPI2C2 
+SECTION: ".abs_section_183a"
+  _SPI2BR 
+SECTION: ".abs_section_183b"
+  _SPI2S 
+SECTION: ".abs_section_183d"
+  _SPI2D 
+SECTION: ".abs_section_1840"
+  _PTAPE 
+SECTION: ".abs_section_1841"
+  _PTASE 
+SECTION: ".abs_section_1842"
+  _PTADS 
+SECTION: ".abs_section_1844"
+  _PTBPE 
+SECTION: ".abs_section_1845"
+  _PTBSE 
+SECTION: ".abs_section_1846"
+  _PTBDS 
+SECTION: ".abs_section_1848"
+  _PTCPE 
+SECTION: ".abs_section_1849"
+  _PTCSE 
+SECTION: ".abs_section_184a"
+  _PTCDS 
+SECTION: ".abs_section_184c"
+  _PTDPE 
+SECTION: ".abs_section_184d"
+  _PTDSE 
+SECTION: ".abs_section_184e"
+  _PTDDS 
+SECTION: ".abs_section_1850"
+  _PTEPE 
+SECTION: ".abs_section_1851"
+  _PTESE 
+SECTION: ".abs_section_1852"
+  _PTEDS 
+SECTION: ".abs_section_1854"
+  _PTFPE 
+SECTION: ".abs_section_1855"
+  _PTFSE 
+SECTION: ".abs_section_1856"
+  _PTFDS 
+SECTION: ".abs_section_1858"
+  _PTGPE 
+SECTION: ".abs_section_1859"
+  _PTGSE 
+SECTION: ".abs_section_185a"
+  _PTGDS 
+SECTION: ".abs_section_185c"
+  _PTHPE 
+SECTION: ".abs_section_185d"
+  _PTHSE 
+SECTION: ".abs_section_185e"
+  _PTHDS 
+SECTION: ".abs_section_1860"
+  _PTJPE 
+SECTION: ".abs_section_1861"
+  _PTJSE 
+SECTION: ".abs_section_1862"
+  _PTJDS 
+SECTION: ".abs_section_1868"
+  _IIC2A 
+SECTION: ".abs_section_1869"
+  _IIC2F 
+SECTION: ".abs_section_186a"
+  _IIC2C1 
+SECTION: ".abs_section_186b"
+  _IIC2S 
+SECTION: ".abs_section_186c"
+  _IIC2D 
+SECTION: ".abs_section_186d"
+  _IIC2C2 
+SECTION: ".abs_section_1872"
+  _SCI2C1 
+SECTION: ".abs_section_1873"
+  _SCI2C2 
+SECTION: ".abs_section_1874"
+  _SCI2S1 
+SECTION: ".abs_section_1875"
+  _SCI2S2 
+SECTION: ".abs_section_1876"
+  _SCI2C3 
+SECTION: ".abs_section_1877"
+  _SCI2D 
+SECTION: ".abs_section_1878"
+  _PTCSET 
+SECTION: ".abs_section_1879"
+  _PTESET 
+SECTION: ".abs_section_187a"
+  _PTCCLR 
+SECTION: ".abs_section_187b"
+  _PTECLR 
+SECTION: ".abs_section_187c"
+  _PTCTOG 
+SECTION: ".abs_section_187d"
+  _PTETOG 
+SECTION: ".abs_section_12"
+  _ADCR 
+SECTION: ".abs_section_14"
+  _ADCCV 
+SECTION: ".abs_section_20"
+  _SCI1BD 
+SECTION: ".abs_section_41"
+  _TPM1CNT 
+SECTION: ".abs_section_43"
+  _TPM1MOD 
+SECTION: ".abs_section_46"
+  _TPM1C0V 
+SECTION: ".abs_section_49"
+  _TPM1C1V 
+SECTION: ".abs_section_4c"
+  _TPM1C2V 
+SECTION: ".abs_section_51"
+  _TPM2CNT 
+SECTION: ".abs_section_53"
+  _TPM2MOD 
+SECTION: ".abs_section_56"
+  _TPM2C0V 
+SECTION: ".abs_section_59"
+  _TPM2C1V 
+SECTION: ".abs_section_5c"
+  _TPM2C2V 
+SECTION: ".abs_section_61"
+  _TPM3CNT 
+SECTION: ".abs_section_63"
+  _TPM3MOD 
+SECTION: ".abs_section_66"
+  _TPM3C0V 
+SECTION: ".abs_section_69"
+  _TPM3C1V 
+SECTION: ".abs_section_6c"
+  _TPM3C2V 
+SECTION: ".abs_section_6f"
+  _TPM3C3V 
+SECTION: ".abs_section_72"
+  _TPM3C4V 
+SECTION: ".abs_section_75"
+  _TPM3C5V 
+SECTION: ".abs_section_1806"
+  _SDID 
+SECTION: ".abs_section_1810"
+  _DBGCA 
+SECTION: ".abs_section_1812"
+  _DBGCB 
+SECTION: ".abs_section_1814"
+  _DBGCC 
+SECTION: ".abs_section_1816"
+  _DBGF 
+SECTION: ".abs_section_1870"
+  _SCI2BD 
+SECTION: ".abs_section_ffc0"
+  _vect 
+
+*********************************************************************************************
+OBJECT LIST SORTED BY ADDRESS
+     Name                                      Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+     _PTAD                                        0       1       1       1   .abs_section_0
+     _PTADD                                       1       1       1       0   .abs_section_1
+     _PTBD                                        2       1       1       0   .abs_section_2
+     _PTBDD                                       3       1       1       0   .abs_section_3
+     _PTCD                                        4       1       1       1   .abs_section_4
+     _PTCDD                                       5       1       1       2   .abs_section_5
+     _PTDD                                        6       1       1       0   .abs_section_6
+     _PTDDD                                       7       1       1       0   .abs_section_7
+     _PTED                                        8       1       1       0   .abs_section_8
+     _PTEDD                                       9       1       1       0   .abs_section_9
+     _PTFD                                        A       1       1       0   .abs_section_a
+     _PTFDD                                       B       1       1       0   .abs_section_b
+     _KBI1SC                                      C       1       1       0   .abs_section_c
+     _KBI1PE                                      D       1       1       0   .abs_section_d
+     _KBI1ES                                      E       1       1       0   .abs_section_e
+     _IRQSC                                       F       1       1       5   .abs_section_f
+     _ADCSC1                                     10       1       1      14   .abs_section_10
+     _ADCSC2                                     11       1       1       1   .abs_section_11
+     _ADCR                                       12       2       2       4   .abs_section_12
+     _ADCCV                                      14       2       2       0   .abs_section_14
+     _ADCCFG                                     16       1       1       1   .abs_section_16
+     _APCTL1                                     17       1       1       0   .abs_section_17
+     _APCTL2                                     18       1       1       0   .abs_section_18
+     _APCTL3                                     19       1       1       0   .abs_section_19
+     _ACMP1SC                                    1A       1       1       0   .abs_section_1a
+     _ACMP2SC                                    1B       1       1       0   .abs_section_1b
+     _PTGD                                       1C       1       1       0   .abs_section_1c
+     _PTGDD                                      1D       1       1       0   .abs_section_1d
+     _PTHD                                       1E       1       1       0   .abs_section_1e
+     _PTHDD                                      1F       1       1       0   .abs_section_1f
+     _SCI1BD                                     20       2       2       0   .abs_section_20
+     _SCI1C1                                     22       1       1       0   .abs_section_22
+     _SCI1C2                                     23       1       1       0   .abs_section_23
+     _SCI1S1                                     24       1       1       0   .abs_section_24
+     _SCI1S2                                     25       1       1       0   .abs_section_25
+     _SCI1C3                                     26       1       1       0   .abs_section_26
+     _SCI1D                                      27       1       1       0   .abs_section_27
+     _SPI1C1                                     28       1       1       0   .abs_section_28
+     _SPI1C2                                     29       1       1       0   .abs_section_29
+     _SPI1BR                                     2A       1       1       0   .abs_section_2a
+     _SPI1S                                      2B       1       1       0   .abs_section_2b
+     _SPI1D                                      2D       1       1       0   .abs_section_2d
+     _PTJD                                       2E       1       1       0   .abs_section_2e
+     _PTJDD                                      2F       1       1       0   .abs_section_2f
+     _IIC1A                                      30       1       1       0   .abs_section_30
+     _IIC1F                                      31       1       1       0   .abs_section_31
+     _IIC1C1                                     32       1       1       0   .abs_section_32
+     _IIC1S                                      33       1       1       0   .abs_section_33
+     _IIC1D                                      34       1       1       0   .abs_section_34
+     _IIC1C2                                     35       1       1       0   .abs_section_35
+     _ICSC1                                      38       1       1       1   .abs_section_38
+     _ICSC2                                      39       1       1       1   .abs_section_39
+     _ICSTRM                                     3A       1       1       1   .abs_section_3a
+     _ICSSC                                      3B       1       1       5   .abs_section_3b
+     _KBI2SC                                     3C       1       1       0   .abs_section_3c
+     _KBI2PE                                     3D       1       1       0   .abs_section_3d
+     _KBI2ES                                     3E       1       1       0   .abs_section_3e
+     _TPM1SC                                     40       1       1       4   .abs_section_40
+     _TPM1CNT                                    41       2       2       1   .abs_section_41
+     _TPM1MOD                                    43       2       2       1   .abs_section_43
+     _TPM1C0SC                                   45       1       1       0   .abs_section_45
+     _TPM1C0V                                    46       2       2       0   .abs_section_46
+     _TPM1C1SC                                   48       1       1       0   .abs_section_48
+     _TPM1C1V                                    49       2       2       0   .abs_section_49
+     _TPM1C2SC                                   4B       1       1       0   .abs_section_4b
+     _TPM1C2V                                    4C       2       2       0   .abs_section_4c
+     _TPM2SC                                     50       1       1       4   .abs_section_50
+     _TPM2CNT                                    51       2       2       1   .abs_section_51
+     _TPM2MOD                                    53       2       2       1   .abs_section_53
+     _TPM2C0SC                                   55       1       1       0   .abs_section_55
+     _TPM2C0V                                    56       2       2       0   .abs_section_56
+     _TPM2C1SC                                   58       1       1       0   .abs_section_58
+     _TPM2C1V                                    59       2       2       0   .abs_section_59
+     _TPM2C2SC                                   5B       1       1       0   .abs_section_5b
+     _TPM2C2V                                    5C       2       2       0   .abs_section_5c
+     _TPM3SC                                     60       1       1       9   .abs_section_60
+     _TPM3CNT                                    61       2       2       3   .abs_section_61
+     _TPM3MOD                                    63       2       2       2   .abs_section_63
+     _TPM3C0SC                                   65       1       1       0   .abs_section_65
+     _TPM3C0V                                    66       2       2       0   .abs_section_66
+     _TPM3C1SC                                   68       1       1       0   .abs_section_68
+     _TPM3C1V                                    69       2       2       0   .abs_section_69
+     _TPM3C2SC                                   6B       1       1       0   .abs_section_6b
+     _TPM3C2V                                    6C       2       2       0   .abs_section_6c
+     _TPM3C3SC                                   6E       1       1       0   .abs_section_6e
+     _TPM3C3V                                    6F       2       2       0   .abs_section_6f
+     _TPM3C4SC                                   71       1       1       0   .abs_section_71
+     _TPM3C4V                                    72       2       2       0   .abs_section_72
+     _TPM3C5SC                                   74       1       1       0   .abs_section_74
+     _TPM3C5V                                    75       2       2       0   .abs_section_75
+     _PPAGE                                      78       1       1       0   .abs_section_78
+     _LAP2                                       79       1       1       0   .abs_section_79
+     _LAP1                                       7A       1       1       0   .abs_section_7a
+     _LAP0                                       7B       1       1       0   .abs_section_7b
+     _LWP                                        7C       1       1       0   .abs_section_7c
+     _LBP                                        7D       1       1       0   .abs_section_7d
+     _LB                                         7E       1       1       0   .abs_section_7e
+     _LAPAB                                      7F       1       1       0   .abs_section_7f
+     TAXA_AMOSTRAGEM                             A0       2       2       5   .data       
+     CANAL_AMOSTRAGEM                            A2       1       1       1   .data       
+     address                                     A3       2       2       8   .data       
+     SENHA                                       A5     200     512       2   .data       
+     amostrando                                 2A5       1       1       5   .bss        
+     mCalibraF                                  2A6       2       2       2   .bss        
+     mCalibraQ                                  2A8       2       2       2   .bss        
+     contando                                   2AA       1       1       3   .bss        
+     segundos                                   2AB       1       1       6   .bss        
+     mSegundos                                  2AC       1       1       4   .bss        
+     botaoApertado                              2AD       1       1       6   .bss        
+     botaoBloqueado                             2AE       1       1       4   .bss        
+     apertado                                   2AF       1       1       4   .bss        
+     memCheia                                   2B0       1       1       9   .bss        
+     autenticado                                2B1       1       1       6   .bss        
+     segundoSerial                              2B2       1       1       3   .bss        
+     segundoConf                                2B3       1       1       3   .bss        
+     tempo1                                     2B4       2       2       2   .bss        
+     tempo2                                     2B6       2       2       2   .bss        
+     tempo3                                     2B8       2       2       2   .bss        
+     contador1                                  2BA       2       2       4   .bss        
+     contador2                                  2BC       2       2       4   .bss        
+     contador3                                  2BE       2       2       4   .bss        
+     funcao1                                    2C0       2       2       2   .bss        
+     funcao2                                    2C2       2       2       2   .bss        
+     funcao3                                    2C4       2       2       2   .bss        
+     EnUser                                     2C6       1       1       6   .bss        
+     CntDay                                     2C7       1       1       5   .bss        
+     CntMonth                                   2C8       1       1       6   .bss        
+     CntYear                                    2C9       2       2       5   .bss        
+     TotalHthL                                  2CB       4       4       6   .bss        
+     TotalHthH                                  2CF       4       4       6   .bss        
+     pbuf                                       2D3       6       6      14   .bss        
+     estado                                     2D9       2       2       3   .common     
+     uAddr                                      2DB       2       2       6   .common     
+     uDados                                     2DD       2       2       6   .common     
+     buffer                                     2DF     200     512      54   .common     
+     CCR_reg                                    4DF       1       1       6   .common     
+     CCR_lock                                   4E0       1       1      13   .common     
+     errno                                      4E1       2       2       2   .common     
+     _SRS                                      1800       1       1      10   .abs_section_1800
+     _SBDFR                                    1801       1       1       0   .abs_section_1801
+     _SOPT1                                    1802       1       1       1   .abs_section_1802
+     _SOPT2                                    1803       1       1       1   .abs_section_1803
+     _SDID                                     1806       2       2       0   .abs_section_1806
+     _SPMSC1                                   1808       1       1       3   .abs_section_1808
+     _SPMSC2                                   1809       1       1       3   .abs_section_1809
+     _SPMSC3                                   180B       1       1       2   .abs_section_180b
+     _SCGC1                                    180E       1       1       1   .abs_section_180e
+     _SCGC2                                    180F       1       1       1   .abs_section_180f
+     _DBGCA                                    1810       2       2       0   .abs_section_1810
+     _DBGCB                                    1812       2       2       0   .abs_section_1812
+     _DBGCC                                    1814       2       2       0   .abs_section_1814
+     _DBGF                                     1816       2       2       0   .abs_section_1816
+     _DBGCAX                                   1818       1       1       0   .abs_section_1818
+     _DBGCBX                                   1819       1       1       0   .abs_section_1819
+     _DBGCCX                                   181A       1       1       0   .abs_section_181a
+     _DBGFX                                    181B       1       1       0   .abs_section_181b
+     _DBGC                                     181C       1       1       0   .abs_section_181c
+     _DBGT                                     181D       1       1       0   .abs_section_181d
+     _DBGS                                     181E       1       1       0   .abs_section_181e
+     _DBGCNT                                   181F       1       1       0   .abs_section_181f
+     _FCDIV                                    1820       1       1       0   .abs_section_1820
+     _FOPT                                     1821       1       1       0   .abs_section_1821
+     _FCNFG                                    1823       1       1       0   .abs_section_1823
+     _FPROT                                    1824       1       1       0   .abs_section_1824
+     _FSTAT                                    1825       1       1       0   .abs_section_1825
+     _FCMD                                     1826       1       1       0   .abs_section_1826
+     _RTCSC                                    1830       1       1       4   .abs_section_1830
+     _RTCCNT                                   1831       1       1       0   .abs_section_1831
+     _RTCMOD                                   1832       1       1       1   .abs_section_1832
+     _SPI2C1                                   1838       1       1       0   .abs_section_1838
+     _SPI2C2                                   1839       1       1       0   .abs_section_1839
+     _SPI2BR                                   183A       1       1       0   .abs_section_183a
+     _SPI2S                                    183B       1       1       0   .abs_section_183b
+     _SPI2D                                    183D       1       1       0   .abs_section_183d
+     _PTAPE                                    1840       1       1       0   .abs_section_1840
+     _PTASE                                    1841       1       1       1   .abs_section_1841
+     _PTADS                                    1842       1       1       1   .abs_section_1842
+     _PTBPE                                    1844       1       1       0   .abs_section_1844
+     _PTBSE                                    1845       1       1       1   .abs_section_1845
+     _PTBDS                                    1846       1       1       1   .abs_section_1846
+     _PTCPE                                    1848       1       1       0   .abs_section_1848
+     _PTCSE                                    1849       1       1       1   .abs_section_1849
+     _PTCDS                                    184A       1       1       1   .abs_section_184a
+     _PTDPE                                    184C       1       1       0   .abs_section_184c
+     _PTDSE                                    184D       1       1       1   .abs_section_184d
+     _PTDDS                                    184E       1       1       1   .abs_section_184e
+     _PTEPE                                    1850       1       1       0   .abs_section_1850
+     _PTESE                                    1851       1       1       1   .abs_section_1851
+     _PTEDS                                    1852       1       1       1   .abs_section_1852
+     _PTFPE                                    1854       1       1       0   .abs_section_1854
+     _PTFSE                                    1855       1       1       1   .abs_section_1855
+     _PTFDS                                    1856       1       1       1   .abs_section_1856
+     _PTGPE                                    1858       1       1       0   .abs_section_1858
+     _PTGSE                                    1859       1       1       1   .abs_section_1859
+     _PTGDS                                    185A       1       1       1   .abs_section_185a
+     _PTHPE                                    185C       1       1       0   .abs_section_185c
+     _PTHSE                                    185D       1       1       1   .abs_section_185d
+     _PTHDS                                    185E       1       1       1   .abs_section_185e
+     _PTJPE                                    1860       1       1       0   .abs_section_1860
+     _PTJSE                                    1861       1       1       1   .abs_section_1861
+     _PTJDS                                    1862       1       1       1   .abs_section_1862
+     _IIC2A                                    1868       1       1       0   .abs_section_1868
+     _IIC2F                                    1869       1       1       1   .abs_section_1869
+     _IIC2C1                                   186A       1       1      10   .abs_section_186a
+     _IIC2S                                    186B       1       1      11   .abs_section_186b
+     _IIC2D                                    186C       1       1       6   .abs_section_186c
+     _IIC2C2                                   186D       1       1       0   .abs_section_186d
+     _SCI2BD                                   1870       2       2       2   .abs_section_1870
+     _SCI2C1                                   1872       1       1       1   .abs_section_1872
+     _SCI2C2                                   1873       1       1       1   .abs_section_1873
+     _SCI2S1                                   1874       1       1       5   .abs_section_1874
+     _SCI2S2                                   1875       1       1       1   .abs_section_1875
+     _SCI2C3                                   1876       1       1       1   .abs_section_1876
+     _SCI2D                                    1877       1       1       2   .abs_section_1877
+     _PTCSET                                   1878       1       1       0   .abs_section_1878
+     _PTESET                                   1879       1       1       0   .abs_section_1879
+     _PTCCLR                                   187A       1       1       0   .abs_section_187a
+     _PTECLR                                   187B       1       1       0   .abs_section_187b
+     _PTCTOG                                   187C       1       1       0   .abs_section_187c
+     _PTETOG                                   187D       1       1       0   .abs_section_187d
+     Cpu_Interrupt                             2080       4       4      25   .init       
+     _EntryPoint                               2084      52      82       1   .init       
+     PE_low_level_init                         20D6      60      96       1   .init       
+     configuraLVD                              2144       B      11       1   .text       
+     tensaoBaixa                               214F      32      50       1   .text       
+     sair                                      2181       A      10       1   .text       
+     calibrar                                  218B      48      72       1   .text       
+     ajuda                                     21D3      54      84       1   .text       
+     status                                    2227      C5     197       1   .text       
+     setDate                                   22EC      90     144       1   .text       
+     setTime                                   237C      8F     143       1   .text       
+     setSenha                                  240B      33      51       1   .text       
+     setAmostragem                             243E      48      72       1   .text       
+     mostrar                                   2486     1CF     463       7   .text       
+     main                                      2655     39E     926      41   .text       
+     configuraAmostragem                       29F3      15      21       1   .text       
+     calibrarAmostragem                        2A08      AB     171       1   .text       
+     paraAmostragem                            2AB3      14      20       9   .text       
+     iniciaAmostragem                          2AC7      41      65       1   .text       
+     amostra                                   2B08      E2     226       3   .text       
+     getAmostra                                2BEA       F      15       1   .text       
+     configuraIRQ                              2BF9       9       9       1   .text       
+     contaSegundo                              2C02      21      33       1   .text       
+     resetIRQ                                  2C23      18      24       5   .text       
+     interruptIRQ                              2C3B      2C      44       1   .text       
+     configuraMem                              2C67      B1     177       1   .text       
+     delay                                     2D18      35      53       3   .text       
+     salvaAmostra                              2D4D      26      38       1   .text       
+     salvaHeader                               2D73      E3     227       7   .text       
+     limparMem                                 2E56      4B      75       2   .text       
+     auxMem                                    2EA1      4D      77       4   .text       
+     escreveMem                                2EEE      59      89       6   .text       
+     leMem                                     2F47      5D      93       3   .text       
+     leHeader                                  2FA4      C7     199       5   .text       
+     leDado                                    306B      22      34       2   .text       
+     autentica                                 308D      38      56       1   .text       
+     incSerial                                 30C5       7       7       1   .text       
+     incConf                                   30CC       7       7       1   .text       
+     verificaSerial                            30D3      BF     191       1   .text       
+     leSerial                                  3192      A2     162       8   .text       
+     escreveSerial                             3234      3E      62      56   .text       
+     conta                                     3272      73     115       4   .text       
+     desligaTimer                              32E5      19      25       6   .text       
+     timer1                                    32FE      1B      27       1   .text       
+     timer2                                    3319      1B      27       1   .text       
+     timer3                                    3334      1B      27       1   .text       
+     loadByte                                  334F       E      14       5   .text       
+     Init                                      335D      6D     109       1   .text       
+     _Startup                                  33CA       9       9       1   .text       
+     ASerial_RecvChar                          33D3      26      38       1   .text       
+     ASerial_SendChar                          33F9      12      18       1   .text       
+     ASerial_Init                              340B      1F      31       1   .text       
+     HWEnDi                                    342A      12      18       3   .text       
+     relogio_SetTime                           343C      98     152       3   .text       
+     relogio_GetTime                           34D4      96     150       4   .text       
+     relogio_SetDate                           356A      8C     140       3   .text       
+     relogio_GetDate                           35F6      3D      61       4   .text       
+     relogio_InitTD                            3633      2D      45       1   .text       
+     relogio_Interrupt                         3660      AB     171       2   .text       
+     isdigit                                   370B       E      14       1   .text       
+     isspace                                   3719      1E      30       3   .text       
+     tolower                                   3737      1C      28       1   .text       
+     toupper                                   3753      1C      28       3   .text       
+     vprintf                                   376F     60B    1547      39   .text       
+     _out                                      3D7A       D      13       9   .text       
+     deposit_char                              3D87      15      21       1   .text       
+     sprintf                                   3D9C      3B      59       8   .text       
+     _PUSH_ARGS_L                              3DD7      20      32       3   .text       
+     _ENTER_UNARY_L                            3DF7      29      41       2   .text       
+     _ENTER_BINARY_L                           3E20      16      22       5   .text       
+     _ENTER_BINARY_L_RC                        3E36      19      25       6   .text       
+     _ENTER_BINARY_L_LC                        3E4F      1A      26       3   .text       
+     _IDIVMOD                                  3E69      69     105       3   .text       
+     _SPLITSIGN                                3ED2      1C      28       1   .text       
+     _LADD_k_is_k_plus_j                       3EEE      1F      31       2   .text       
+     _k_is_k_plus_j_l                          3F0D      1E      30       2   .text       
+     _k_is_k_plus_j_i                          3F2B      12      18       3   .text       
+     _LSUB_k_is_k_minus_j                      3F3D      1F      31       3   .text       
+     _LMUL_k_is_k_mul_j                        3F5C      81     129       2   .text       
+     _LDIVMOD                                  3FDD      A4     164       3   .text       
+     _NEG_L_HX                                 4081      13      19       2   .text       
+     _ABS_L_HX                                 4094       6       6       2   .text       
+     _SPLITSIGN_L                              409A       A      10       1   .text       
+     _LMODU_k_is_k_mod_j                       40A4       B      11       1   .text       
+     _LDIVU_k_is_k_div_j                       40AF      17      23       3   .text       
+     _LDIVS_k_is_k_div_j                       40C6      27      39       1   .text       
+     _LCMP_k_rel_j                             40ED      1F      31       2   .text       
+     _IMUL_STAR08                              410C      27      39       5   .text       
+     _IDIVS_STAR08                             4133      1B      27       2   .text       
+     _IDIVU_STAR08                             414E       D      13       4   .text       
+     _IMODU_STAR08                             415B      10      16       4   .text       
+     _IDIVU_8                                  416B       E      14       1   .text       
+     _IMODU_8                                  4179      12      18       1   .text       
+     _LINC                                     418B      16      22       1   .text       
+     _LNEG                                     41A1      1C      28       2   .text       
+     _LADD                                     41BD       6       6       4   .text       
+     _LADD_RC                                  41C3       6       6       1   .text       
+     _LSUB                                     41C9       6       6       1   .text       
+     _LSUB_LC                                  41CF       6       6       2   .text       
+     _LSUB_RC                                  41D5       6       6       1   .text       
+     _LMUL                                     41DB       6       6       1   .text       
+     _LMUL_RC                                  41E1       6       6       4   .text       
+     _LDIVS_LC                                 41E7       6       6       2   .text       
+     _LDIVU                                    41ED       6       6       1   .text       
+     _LDIVU_LC                                 41F3       6       6       4   .text       
+     _LDIVU_RC                                 41F9       6       6       3   .text       
+     _LMODU_RC                                 41FF       6       6       2   .text       
+     _LCMP                                     4205       6       6       6   .text       
+     _LCMP_RC                                  420B       6       6       1   .text       
+     _COPY                                     4211      30      48       7   .text       
+     _POP32                                    4241      1A      26      15   .text       
+     _SEXT16_32                                425B       D      13       8   .text       
+     _Jump_Table_Addr                          4268      16      22       2   .text       
+     _Jump_Table_Header_Offset                 427E      24      36       4   .text       
+     _Search_Table_8_Addr                      42A2      21      33       2   .text       
+     _Search_Table_8_Offset                    42C3      25      37       1   .text       
+     _PUSH_CC                                  42E8       F      15       2   .text       
+     _POP_CC                                   42F7       F      15       2   .text       
+     _getNum                                   4306      43      67       1   .text       
+     _copyList                                 4349      E8     232       1   .text       
+     vsscanf                                   4431     485    1157      49   .text       
+     sscanf                                    48B6      1B      27       2   .text       
+     CheckCharWithBase                         48D1      50      80       2   .text       
+     _strtoul                                  4921     1FF     511       9   .text       
+     _strtol                                   4B20     152     338       4   .text       
+     strtol                                    4C72      2D      45       2   .text       
+     strlen                                    4C9F      27      39       3   .text       
+     strcpy                                    4CC6      29      41       4   .text       
+     strcmp                                    4CEF      3F      63      26   .text       
+     ULY                                       4D2E       C      12       2   .rodata     
+     LY                                        4D3A       C      12       2   .rodata     
+     pow10                                     4D46      28      40       4   .rodata     
+     pow16                                     4D6E      20      32       4   .rodata     
+     pow8                                      4D8E      2C      44       4   .rodata     
+     STRING.e.1                                4DBA       2       2       1   .rodata1    
+     STRING..Sessao.Finalizada..2              4DBC      14      20       1   .rodata1    
+     STRING..Informe.a.temperatu.3             4DD0      19      25       1   .rodata1    
+     STRING..Sensor.Calibrado.co.4             4DE9      1F      31       1   .rodata1    
+     STRING..Temperatura.fora.do.5             4E08      20      32       1   .rodata1    
+     STRING..Operacao.Cancelada..6             4E28      15      21       1   .rodata1    
+     STRING...............AJUDA..7             4E3D      22      34       1   .rodata1    
+     STRING..1..AJUDA.8                        4E5F       A      10       1   .rodata1    
+     STRING..2..AMOSTRAGEM.9                   4E69       F      15       1   .rodata1    
+     STRING..3..APAGAR.10                      4E78       B      11       1   .rodata1    
+     STRING..4..CALIBRAR.11                    4E83       D      13       1   .rodata1    
+     STRING..5..DATA.12                        4E90       9       9       1   .rodata1    
+     STRING..6..IR.13                          4E99       7       7       1   .rodata1    
+     STRING..7..HORA.14                        4EA0       9       9       1   .rodata1    
+     STRING..8..MOSTRAR.15                     4EA9       C      12       1   .rodata1    
+     STRING..9..PARAR.16                       4EB5       A      10       1   .rodata1    
+     STRING..10..SENHA.17                      4EBF       B      11       1   .rodata1    
+     STRING..11..STATUS.18                     4ECA       C      12       1   .rodata1    
+     STRING..12..SAIR.19                       4ED6       A      10       1   .rodata1    
+     STRING......................20            4EE0      23      35       1   .rodata1    
+     STRING...............STATUS.21            4F03      23      35       1   .rodata1    
+     STRING..Amostragem..EXECUTA.22            4F26      21      33       1   .rodata1    
+     STRING..Amostragem..PARADA..23            4F47      15      21       1   .rodata1    
+     STRING..Horario..d..d..d..d.24            4F5C      1E      30       1   .rodata1    
+     STRING..Memoria..CHEIA..25                4F7A      11      17       1   .rodata1    
+     STRING..Memoria.Disponivel..26            4F8B      22      34       1   .rodata1    
+     STRING......................27            4FAD      24      36       1   .rodata1    
+     STRING..Informe.nova.data...28            4FD1      22      34       1   .rodata1    
+     STRING..d..d..d.29                        4FF3       9       9       1   .rodata1    
+     STRING..Data.definida.com.s.30            4FFC      25      37       1   .rodata1    
+     STRING..Formato.Invalido..31              5021      13      19       1   .rodata1    
+     STRING..Operacao.Cancelada..32            5034      15      21       1   .rodata1    
+     STRING..Informe.novo.horari.33            5049      26      38       1   .rodata1    
+     STRING..d..d..d..d.34                     506F       C      12       1   .rodata1    
+     STRING..Horario.definido.co.35            507B      2B      43       1   .rodata1    
+     STRING..Formato.Invalido..36              50A6      13      19       1   .rodata1    
+     STRING..Operacao.Cancelada..37            50B9      15      21       1   .rodata1    
+     STRING..Informe.sua.nova.Se.38            50CE      1A      26       1   .rodata1    
+     STRING..Senha.definida.com..39            50E8      1D      29       1   .rodata1    
+     STRING..Senha.muito.pequena.40            5105      2B      43       1   .rodata1    
+     STRING..Operacao.Cancelada..41            5130      15      21       1   .rodata1    
+     STRING..Informe.a.nova.Taxa.42            5145      36      54       1   .rodata1    
+     STRING..Taxa.de.Amostragem..43            517B      2A      42       1   .rodata1    
+     STRING..Taxa.de.Amostragem..44            51A5      27      39       1   .rodata1    
+     STRING..Operacao.Cancelada..45            51CC      15      21       1   .rodata1    
+     STRING......................46            51E1      45      69       1   .rodata1    
+     STRING..Amostra...d.graus...47            5226      46      70       1   .rodata1    
+     STRING..Evento...s...Horari.48            526C      2C      44       1   .rodata1    
+     STRING.FALTA.ENERGIA.49                   5298       E      14       1   .rodata1    
+     STRING.MEMORIA.CHEIA.50                   52A6       E      14       1   .rodata1    
+     STRING......................51            52B4      4B      75       1   .rodata1    
+     STRING......................52            52FF      30      48       1   .rodata1    
+     STRING...........DATALOGGER.53            532F      2C      44       1   .rodata1    
+     STRING......................54            535B      30      48       1   .rodata1    
+     STRING...Lucas.Cielo..Iury..55            538B      30      48       1   .rodata1    
+     STRING......................56            53BB      30      48       1   .rodata1    
+     STRING..Apagando.Memoria....57            53EB      15      21       1   .rodata1    
+     STRING..Memoria.Apagada..58               5400      12      18       1   .rodata1    
+     STRING.status.59                          5412       7       7       1   .rodata1    
+     STRING.ajuda.60                           5419       6       6       1   .rodata1    
+     STRING.senha.61                           541F       6       6       1   .rodata1    
+     STRING.amostragem.62                      5425       B      11       1   .rodata1    
+     STRING.parar.63                           5430       6       6       1   .rodata1    
+     STRING.mostrar.64                         5436       8       8       1   .rodata1    
+     STRING.apagar.65                          543E       7       7       1   .rodata1    
+     STRING..Apagando.Memoria....66            5445      15      21       1   .rodata1    
+     STRING..Memoria.Apagada..67               545A      12      18       1   .rodata1    
+     STRING.data.68                            546C       5       5       1   .rodata1    
+     STRING.hora.69                            5471       5       5       1   .rodata1    
+     STRING.calibrar.70                        5476       9       9       1   .rodata1    
+     STRING.sair.71                            547F       5       5       1   .rodata1    
+     STRING..Apagando.Memoria....72            5484      15      21       1   .rodata1    
+     STRING..Memoria.Apagada..73               5499      12      18       1   .rodata1    
+     STRING.ajuda.74                           54AB       6       6       1   .rodata1    
+     STRING.status.75                          54B1       7       7       1   .rodata1    
+     STRING.senha.76                           54B8       6       6       1   .rodata1    
+     STRING.amostragem.77                      54BE       B      11       1   .rodata1    
+     STRING.ir.78                              54C9       3       3       1   .rodata1    
+     STRING..Memoria.Cheia..79                 54CC      10      16       1   .rodata1    
+     STRING.mostrar.80                         54DC       8       8       1   .rodata1    
+     STRING.apagar.81                          54E4       7       7       1   .rodata1    
+     STRING..Apagando.Memoria....82            54EB      15      21       1   .rodata1    
+     STRING..Memoria.Apagada..83               5500      12      18       1   .rodata1    
+     STRING.data.84                            5512       5       5       1   .rodata1    
+     STRING.hora.85                            5517       5       5       1   .rodata1    
+     STRING.calibrar.86                        551C       9       9       1   .rodata1    
+     STRING.sair.87                            5525       5       5       1   .rodata1    
+     STRING..Parando.Amostragem..1             552A      17      23       1   .rodata1    
+     STRING..Amostragem.Parada..2              5541      14      20       1   .rodata1    
+     STRING..Iniciando.Amostrage.3             5555      19      25       1   .rodata1    
+     STRING..Amostragem.Iniciada.4             556E      16      22       1   .rodata1    
+     STRING..Apagando.Bloco...d.1              5584      14      20       1   .rodata1    
+     STRING..Informe.sua.senha...2             5598      15      21       1   .rodata1    
+     STRING............Bem.Vindo.3             55AD      39      57       1   .rodata1    
+     STRING..Informe.o.Comando...4             55E6      15      21       1   .rodata1    
+     STRING..Senha.Errada..5                   55FB       F      15       1   .rodata1    
+     STRING..Operacao.Cancelada..6             560A      15      21       1   .rodata1    
+     STRING...7                                561F       2       2       1   .rodata1    
+     STRING...8                                5621       2       2       1   .rodata1    
+     STRING..Tempo.Esgotado..9                 5623      11      17       1   .rodata1    
+     STRING.....10                             5634       4       4       1   .rodata1    
+     STRING..Voce.precisa.estar..11            5638      2D      45       1   .rodata1    
+     STRING..12                                5665       1       1       1   .rodata1    
+     STRING..13                                5666       1       1       1   .rodata1    
+     STRING..Tempo.esgotado..14                5667      11      17       1   .rodata1    
+     STRING..15                                5678       1       1       1   .rodata1    
+     NVPROT_INIT                               FFBD       1       1       0   .abs_section_ffbd
+     NVOPT_INIT                                FFBF       1       1       0   .abs_section_ffbf
+     _vect                                     FFC0      40      64       0   .abs_section_ffc0
+
+*********************************************************************************************
+UNUSED-OBJECTS SECTION
+---------------------------------------------------------------------------------------------
+NOT USED PROCEDURES
+botaoIRQ_c.obj:
+  liberaBotao 
+ctype.c.o (ansiis.lib):
+  isalnum isalpha iscntrl isgraph islower isprint ispunct isupper isxdigit 
+printf.c.o (ansiis.lib):
+  set_printf vsprintf 
+rtshc08.c.o (ansiis.lib):
+  _PUSH_ARGS_D _ENTER_UNARY_L64 _ENTER_UNARY_L64_4 _ENTER_BINARY_L64 
+  _ENTER_BINARY_L64_LC _ENTER_BINARY_L64_RC _LAND_k_is_k_and_j _LOR_k_is_k_or_j 
+  _LXOR_k_is_k_xor_j _LMODS_k_is_k_mod_j _CMP24_k_rel_j _BMULS _BDIVS _BMODS 
+  _IMODS_STAR08 _IASR _ILSR _ILSL _ICMP _LDEC _LNOT _LAND _LAND_RC _LOR _LOR_RC 
+  _LXOR _LXOR_RC _LDIVS _LDIVS_RC _LMODS _LMODS_LC _LMODS_RC _LMODU _LMODU_LC 
+  _LASR _LLSR _LLSL _PUSH_ARGS_24 _ENTER_BINARY_24_RC _ENTER_BINARY_24 _CMP24 
+  _CMP24_RC _COPY_L _POP64 _STORE32 _STORE64 _SEXT8_32 _CALL_STAR08 
+  _CALL_STAR08_FAR _Jump_Table_Offset _Jump_Table_Header_Addr 
+  _Search_Table_16_Addr _Search_Table_16_Offset _CONV_FAR_TO_NEAR 
+  _CONV_FAR_TO_LINEAR _CONV_LINEAR_TO_FAR 
+stdlib.c.o (ansiis.lib):
+  atexit getenv system mblen mbtowc wctomb mbstowcs wcstombs strtoul _itoa 
+  bsearch swap qsort div ldiv abs labs rand srand 
+string.c.o (ansiis.lib):
+  strerror memchr memcmp memcpy2 memcpy _memcpy_8bitCount memmove memset 
+  _memset_clear_8bitCount strset strcat strncat strncpy strncmp strchr strrchr 
+  strspn strcspn strpbrk strstr strtok strcoll strxfrm 
+NOT USED VARIABLES
+eeprom_c.obj:
+  travado 
+ctype.c.o (ansiis.lib):
+  _ctype 
+rtshc08.c.o (ansiis.lib):
+  _PowOfTwo_8 _PowOfTwo_16 _PowOfTwo_32 
+stdlib.c.o (ansiis.lib):
+  seed channels 
+string.c.o (ansiis.lib):
+  STRING..1 next.2 
+
+*********************************************************************************************
+COPYDOWN SECTION
+---------------------------------------------------------------------------------------------
+------- ROM-ADDRESS: 0x5679 ---- SIZE       4 ---
+Filling bytes inserted
+ 000F00A0
+------- ROM-ADDRESS: 0x567D ---- RAM-ADDRESS: 0xA0 ---- SIZE       2 ---
+Name of initialized Object : TAXA_AMOSTRAGEM
+ 1388
+------- ROM-ADDRESS: 0x567F ---- RAM-ADDRESS: 0xA2 ---- SIZE       1 ---
+Name of initialized Object : CANAL_AMOSTRAGEM
+ 01
+------- ROM-ADDRESS: 0x5680 ---- SIZE       1 ---
+Filling bytes inserted
+ 00
+------- ROM-ADDRESS: 0x5681 ---- RAM-ADDRESS: 0xA4 ---- SIZE       1 ---
+Name of initialized Object : address:1
+ 06
+------- ROM-ADDRESS: 0x5682 ---- RAM-ADDRESS: 0xA5 ---- SIZE      10 ---
+Name of initialized Object : SENHA
+ 6261727269 6368656C6F
+------- ROM-ADDRESS: 0x568C ---- SIZE       2 ---
+Filling bytes inserted
+ 0000
+
+*********************************************************************************************
+OBJECT-DEPENDENCIES SECTION
+---------------------------------------------------------------------------------------------
+_EntryPoint               USES _SOPT1 _SOPT2 _SPMSC1 _SPMSC2 _SPMSC3 _ICSTRM 
+                                _ICSSC _ICSC1 _ICSC2 _SRS _Startup 
+PE_low_level_init         USES _SCGC1 _SCGC2 _PTCDD _PTCD _PTASE _PTBSE _PTCSE 
+                                _PTDSE _PTESE _PTFSE _PTGSE _PTHSE _PTJSE _PTADS 
+                                _PTBDS _PTCDS _PTDDS _PTEDS _PTFDS _PTGDS _PTHDS 
+                                _PTJDS relogio_InitTD ASerial_Init _SRS CCR_lock 
+configuraLVD              USES _SPMSC1 _SPMSC2 
+tensaoBaixa               USES STRING.e.1 escreveSerial _SPMSC2 paraAmostragem 
+                                relogio_GetTime relogio_GetDate salvaHeader 
+sair                      USES autenticado STRING..Sessao.Finalizada..2 
+                                escreveSerial 
+calibrar                  USES STRING..Informe.a.temperatu.3 escreveSerial 
+                                leSerial buffer strtol calibrarAmostragem 
+                                STRING..Sensor.Calibrado.co.4 STRING..Temperatura.fora.do.5 
+                                STRING..Operacao.Cancelada..6 
+ajuda                     USES STRING...............AJUDA..7 escreveSerial 
+                                STRING..1..AJUDA.8 STRING..2..AMOSTRAGEM.9 STRING..3..APAGAR.10 
+                                STRING..4..CALIBRAR.11 STRING..5..DATA.12 STRING..6..IR.13 
+                                STRING..7..HORA.14 STRING..8..MOSTRAR.15 STRING..9..PARAR.16 
+                                STRING..10..SENHA.17 STRING..11..STATUS.18 STRING..12..SAIR.19 
+                                STRING......................20 
+status                    USES STRING...............STATUS.21 escreveSerial 
+                                amostrando TAXA_AMOSTRAGEM STRING..Amostragem..EXECUTA.22 
+                                buffer sprintf STRING..Amostragem..PARADA..23 
+                                relogio_GetTime relogio_GetDate STRING..Horario..d..d..d..d.24 
+                                memCheia STRING..Memoria..CHEIA..25 address _LSUB_LC 
+                                _LMUL_RC _LDIVU_RC _POP32 
+                                STRING..Memoria.Disponivel..26 STRING......................27 
+setDate                   USES STRING..Informe.nova.data...28 escreveSerial 
+                                leSerial buffer strlen STRING..d..d..d.29 sscanf 
+                                relogio_SetDate STRING..Data.definida.com.s.30 sprintf 
+                                STRING..Formato.Invalido..31 STRING..Operacao.Cancelada..32 
+setTime                   USES STRING..Informe.novo.horari.33 escreveSerial 
+                                leSerial buffer strlen STRING..d..d..d..d.34 sscanf 
+                                relogio_SetTime STRING..Horario.definido.co.35 sprintf 
+                                STRING..Formato.Invalido..36 STRING..Operacao.Cancelada..37 
+setSenha                  USES STRING..Informe.sua.nova.Se.38 escreveSerial 
+                                leSerial buffer strlen SENHA strcpy 
+                                STRING..Senha.definida.com..39 STRING..Senha.muito.pequena.40 
+                                STRING..Operacao.Cancelada..41 
+setAmostragem             USES STRING..Informe.a.nova.Taxa.42 escreveSerial 
+                                leSerial buffer strtol TAXA_AMOSTRAGEM 
+                                STRING..Taxa.de.Amostragem..43 STRING..Taxa.de.Amostragem..44 
+                                STRING..Operacao.Cancelada..45 
+mostrar                   USES STRING......................46 escreveSerial 
+                                mostrar _IDIVU_STAR08 _IMODU_STAR08 
+                                STRING..Amostra...d.graus...47 buffer sprintf leDado STRING.MEMORIA.CHEIA.50 
+                                STRING.FALTA.ENERGIA.49 STRING..Evento...s...Horari.48 leHeader 
+                                STRING......................51 
+main                      USES PE_low_level_init configuraMem 
+                                configuraAmostragem configuraIRQ configuraLVD memCheia estado 
+                                STRING......................52 escreveSerial STRING...........DATALOGGER.53 
+                                STRING......................54 STRING...Lucas.Cielo..Iury..55 
+                                STRING......................56 _SRS verificaSerial main paraAmostragem 
+                                relogio_GetTime relogio_GetDate salvaHeader botaoApertado 
+                                segundos apertado resetIRQ 
+                                STRING..Apagando.Memoria....57 STRING..Memoria.Apagada..58 buffer 
+                                STRING.status.59 strcmp STRING.ajuda.60 STRING.senha.61 
+                                STRING.amostragem.62 STRING.parar.63 STRING.mostrar.64 
+                                STRING.apagar.65 STRING..Apagando.Memoria....66 
+                                STRING..Memoria.Apagada..67 STRING.data.68 STRING.hora.69 
+                                STRING.calibrar.70 STRING.sair.71 amostrando iniciaAmostragem 
+                                STRING..Apagando.Memoria....72 STRING..Memoria.Apagada..73 STRING.ajuda.74 
+                                ajuda STRING.status.75 status STRING.senha.76 
+                                setSenha STRING.amostragem.77 setAmostragem 
+                                STRING.ir.78 STRING..Memoria.Cheia..79 STRING.mostrar.80 
+                                mostrar STRING.apagar.81 
+                                STRING..Apagando.Memoria....82 STRING..Memoria.Apagada..83 STRING.data.84 
+                                setDate STRING.hora.85 setTime STRING.calibrar.86 
+                                calibrar STRING.sair.87 sair autenticado limparMem 
+configuraAmostragem       USES _ADCSC1 _ADCSC2 _ADCCFG _SPMSC1 
+                                CANAL_AMOSTRAGEM 
+calibrarAmostragem        USES _ADCSC1 _ADCR _SEXT16_32 _LDIVS_LC _POP32 
+                                _LDIVU_LC mCalibraF mCalibraQ _IMUL_STAR08 _IDIVS_STAR08 
+paraAmostragem            USES STRING..Parando.Amostragem..1 escreveSerial 
+                                amostrando desligaTimer STRING..Amostragem.Parada..2 
+iniciaAmostragem          USES STRING..Iniciando.Amostrage.3 escreveSerial 
+                                amostrando relogio_GetTime relogio_GetDate 
+                                TAXA_AMOSTRAGEM salvaHeader getAmostra conta 
+                                STRING..Amostragem.Iniciada.4 
+amostra                   USES _ADCSC1 _ADCR _SEXT16_32 _LDIVS_LC _POP32 
+                                _LDIVU_LC amostra mCalibraF mCalibraQ _IDIVS_STAR08 
+                                _IMUL_STAR08 
+getAmostra                USES amostra salvaAmostra 
+configuraIRQ              USES _IRQSC 
+contaSegundo              USES botaoBloqueado mSegundos segundos _PTAD 
+                                apertado 
+resetIRQ                  USES botaoApertado botaoBloqueado apertado contando 
+                                segundos mSegundos desligaTimer 
+interruptIRQ              USES _IRQSC botaoBloqueado botaoApertado contando 
+                                contaSegundo conta 
+configuraMem              USES _IIC2C1 _IIC2F _IIC2S _SRS leDado address 
+                                memCheia leHeader TAXA_AMOSTRAGEM relogio_SetDate 
+                                relogio_SetTime limparMem 
+delay                     USES _TPM3SC _TPM3CNT _TPM3MOD _SRS 
+salvaAmostra              USES address escreveMem memCheia 
+salvaHeader               USES address salvaHeader escreveMem uDados memCheia 
+limparMem                 USES escreveMem STRING..Apagando.Bloco...d.1 buffer 
+                                sprintf escreveSerial memCheia address 
+auxMem                    USES delay _IIC2S _IIC2C1 _IIC2D 
+escreveMem                USES delay uAddr _IIC2C1 _IIC2D auxMem _IIC2S 
+leMem                     USES delay uAddr _IIC2C1 _IIC2D auxMem _IIC2S 
+leHeader                  USES leHeader leMem 
+leDado                    USES leMem 
+autentica                 USES STRING..Informe.sua.senha...2 escreveSerial 
+                                leSerial buffer SENHA strcmp autenticado 
+                                STRING............Bem.Vindo.3 STRING..Informe.o.Comando...4 
+                                STRING..Senha.Errada..5 STRING..Operacao.Cancelada..6 
+incSerial                 USES segundoSerial 
+incConf                   USES segundoConf 
+verificaSerial            USES _SCI2S1 leSerial buffer STRING...7 strcmp 
+                                autenticado segundoConf incConf conta _SRS _PUSH_CC 
+                                _POP_CC STRING...8 desligaTimer 
+                                STRING..Tempo.Esgotado..9 STRING.....10 autentica 
+                                STRING..Voce.precisa.estar..11 escreveSerial 
+leSerial                  USES buffer STRING..12 strcpy segundoSerial 
+                                incSerial conta _SRS _SCI2S1 _PUSH_CC _POP_CC 
+                                ASerial_RecvChar desligaTimer STRING..13 tolower 
+                                STRING..Tempo.esgotado..14 escreveSerial 
+escreveSerial             USES _SRS ASerial_SendChar buffer STRING..15 strcpy 
+conta                     USES _Jump_Table_Header_Offset tempo1 contador1 
+                                funcao1 _TPM1SC _TPM1CNT _TPM1MOD tempo2 contador2 
+                                funcao2 _TPM2SC _TPM2CNT _TPM2MOD tempo3 contador3 
+                                funcao3 _TPM3SC _TPM3CNT _TPM3MOD 
+desligaTimer              USES _Jump_Table_Header_Offset _TPM1SC _TPM2SC 
+                                _TPM3SC 
+timer1                    USES _TPM1SC contador1 tempo1 funcao1 
+timer2                    USES _TPM2SC contador2 tempo2 funcao2 
+timer3                    USES _TPM3SC contador3 tempo3 funcao3 
+Init                      USES _startupData loadByte 
+_Startup                  USES __SEG_END_SSTACK Init main 
+ASerial_RecvChar          USES _SCI2S1 _SCI2D 
+ASerial_SendChar          USES _SCI2S1 _SCI2D 
+ASerial_Init              USES _SCI2C1 _SCI2C3 _SCI2C2 _SCI2S2 _SCI2BD 
+HWEnDi                    USES EnUser _RTCSC 
+relogio_SetTime           USES EnUser HWEnDi _LMUL_RC _LADD TotalHthH _POP32 
+                                TotalHthL 
+relogio_GetTime           USES CCR_lock CCR_reg TotalHthH _LMODU_RC _LDIVU_RC 
+                                _POP32 _IMODU_8 _IDIVU_8 
+relogio_SetDate           USES LY ULY CCR_lock CCR_reg CntDay CntMonth CntYear 
+relogio_GetDate           USES CCR_lock CCR_reg CntYear CntMonth CntDay 
+relogio_InitTD            USES _RTCSC relogio_SetDate EnUser relogio_SetTime 
+                                _RTCMOD HWEnDi 
+relogio_Interrupt         USES _RTCSC relogio_Interrupt TotalHthL _LADD_RC 
+                                _POP32 _LCMP TotalHthH _LCMP_RC _LSUB_RC CntDay 
+                                CntYear ULY LY CntMonth _LINC 
+vprintf                   USES _out vprintf _Search_Table_8_Offset 
+                                _IMUL_STAR08 _Jump_Table_Addr _Search_Table_8_Addr pbuf 
+                                _SEXT16_32 _POP32 _LNEG pow8 _LCMP pow16 pow10 _COPY 
+                                _LSUB 
+_out                      USES pbuf 
+deposit_char              USES pbuf 
+sprintf                   USES pbuf deposit_char vprintf 
+_ENTER_BINARY_L           USES _PUSH_ARGS_L 
+_ENTER_BINARY_L_RC        USES _PUSH_ARGS_L 
+_ENTER_BINARY_L_LC        USES _PUSH_ARGS_L 
+_SPLITSIGN                USES _IDIVMOD 
+_LMUL_k_is_k_mul_j        USES _k_is_k_plus_j_l _k_is_k_plus_j_i 
+_ABS_L_HX                 USES _NEG_L_HX 
+_SPLITSIGN_L              USES _ABS_L_HX 
+_LMODU_k_is_k_mod_j       USES _LDIVMOD 
+_LDIVU_k_is_k_div_j       USES _LDIVMOD 
+_LDIVS_k_is_k_div_j       USES _SPLITSIGN_L _LDIVMOD _NEG_L_HX 
+_IDIVS_STAR08             USES _SPLITSIGN 
+_IDIVU_STAR08             USES _IDIVMOD 
+_IMODU_STAR08             USES _IDIVMOD 
+_IDIVU_8                  USES _IDIVU_STAR08 
+_IMODU_8                  USES _IMODU_STAR08 
+_LINC                     USES _ENTER_UNARY_L 
+_LNEG                     USES _ENTER_UNARY_L 
+_LADD                     USES _ENTER_BINARY_L _LADD_k_is_k_plus_j 
+_LADD_RC                  USES _ENTER_BINARY_L_RC _LADD_k_is_k_plus_j 
+_LSUB                     USES _ENTER_BINARY_L _LSUB_k_is_k_minus_j 
+_LSUB_LC                  USES _ENTER_BINARY_L_LC _LSUB_k_is_k_minus_j 
+_LSUB_RC                  USES _ENTER_BINARY_L_RC _LSUB_k_is_k_minus_j 
+_LMUL                     USES _ENTER_BINARY_L _LMUL_k_is_k_mul_j 
+_LMUL_RC                  USES _ENTER_BINARY_L_RC _LMUL_k_is_k_mul_j 
+_LDIVS_LC                 USES _ENTER_BINARY_L_LC _LDIVS_k_is_k_div_j 
+_LDIVU                    USES _ENTER_BINARY_L _LDIVU_k_is_k_div_j 
+_LDIVU_LC                 USES _ENTER_BINARY_L_LC _LDIVU_k_is_k_div_j 
+_LDIVU_RC                 USES _ENTER_BINARY_L_RC _LDIVU_k_is_k_div_j 
+_LMODU_RC                 USES _ENTER_BINARY_L_RC _LMODU_k_is_k_mod_j 
+_LCMP                     USES _ENTER_BINARY_L _LCMP_k_rel_j 
+_LCMP_RC                  USES _ENTER_BINARY_L_RC _LCMP_k_rel_j 
+_getNum                   USES _IMUL_STAR08 
+vsscanf                   USES vsscanf _getNum _Jump_Table_Addr 
+                                _Search_Table_8_Addr _strtol _Jump_Table_Header_Offset _COPY 
+                                _SEXT16_32 _POP32 _copyList isspace 
+sscanf                    USES vsscanf 
+CheckCharWithBase         USES toupper 
+_strtoul                  USES _strtoul isspace toupper CheckCharWithBase 
+                                _SEXT16_32 _LSUB_LC _LDIVU _LCMP _LMUL _LADD _POP32 errno 
+                                _COPY 
+_strtol                   USES isspace _strtol isdigit _strtoul errno _LNEG 
+                                _POP32 _COPY 
+strtol                    USES _strtol _COPY 
+_vect                     USES timer3 Cpu_Interrupt relogio_Interrupt timer2 
+                                timer1 tensaoBaixa interruptIRQ _EntryPoint 
+
+*********************************************************************************************
+DEPENDENCY TREE
+*********************************************************************************************
+ main and _Startup Group
+ | 
+ +- main                
+ |  | 
+ |  +- PE_low_level_init   
+ |  |  | 
+ |  |  +- relogio_InitTD      
+ |  |  |  | 
+ |  |  |  +- relogio_SetDate     
+ |  |  |  |    
+ |  |  |  +- relogio_SetTime     
+ |  |  |  |  | 
+ |  |  |  |  +- HWEnDi              
+ |  |  |  |  |    
+ |  |  |  |  +- _LMUL_RC            
+ |  |  |  |  |  | 
+ |  |  |  |  |  +- _ENTER_BINARY_L_RC  
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- _PUSH_ARGS_L        
+ |  |  |  |  |  |       
+ |  |  |  |  |  +- _LMUL_k_is_k_mul_j  
+ |  |  |  |  |     | 
+ |  |  |  |  |     +- _k_is_k_plus_j_l    
+ |  |  |  |  |     |    
+ |  |  |  |  |     +- _k_is_k_plus_j_i    
+ |  |  |  |  |          
+ |  |  |  |  +- _LADD               
+ |  |  |  |  |  | 
+ |  |  |  |  |  +- _ENTER_BINARY_L     
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- _PUSH_ARGS_L         (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- _LADD_k_is_k_plus_j 
+ |  |  |  |  |       
+ |  |  |  |  +- _POP32              
+ |  |  |  |       
+ |  |  |  +- HWEnDi               (see above)
+ |  |  |     
+ |  |  +- ASerial_Init        
+ |  |       
+ |  +- configuraMem        
+ |  |  | 
+ |  |  +- leDado              
+ |  |  |  | 
+ |  |  |  +- leMem               
+ |  |  |     | 
+ |  |  |     +- delay               
+ |  |  |     |    
+ |  |  |     +- auxMem              
+ |  |  |        | 
+ |  |  |        +- delay                (see above)
+ |  |  |           
+ |  |  +- leHeader            
+ |  |  |  | 
+ |  |  |  +- leMem                (see above)
+ |  |  |     
+ |  |  +- relogio_SetDate      (see above)
+ |  |  |  
+ |  |  +- relogio_SetTime      (see above)
+ |  |  |  
+ |  |  +- limparMem           
+ |  |     | 
+ |  |     +- escreveMem          
+ |  |     |  | 
+ |  |     |  +- delay                (see above)
+ |  |     |  |  
+ |  |     |  +- auxMem               (see above)
+ |  |     |     
+ |  |     +- sprintf             
+ |  |     |  | 
+ |  |     |  +- deposit_char        
+ |  |     |  |    
+ |  |     |  +- vprintf             
+ |  |     |     | 
+ |  |     |     +- _out                
+ |  |     |     |    
+ |  |     |     +- _Search_Table_8_Offset
+ |  |     |     |    
+ |  |     |     +- _IMUL_STAR08        
+ |  |     |     |    
+ |  |     |     +- _Jump_Table_Addr    
+ |  |     |     |    
+ |  |     |     +- _Search_Table_8_Addr
+ |  |     |     |    
+ |  |     |     +- _SEXT16_32          
+ |  |     |     |    
+ |  |     |     +- _POP32               (see above)
+ |  |     |     |  
+ |  |     |     +- _LNEG               
+ |  |     |     |  | 
+ |  |     |     |  +- _ENTER_UNARY_L      
+ |  |     |     |       
+ |  |     |     +- _LCMP               
+ |  |     |     |  | 
+ |  |     |     |  +- _ENTER_BINARY_L      (see above)
+ |  |     |     |  |  
+ |  |     |     |  +- _LCMP_k_rel_j       
+ |  |     |     |       
+ |  |     |     +- _COPY               
+ |  |     |     |    
+ |  |     |     +- _LSUB               
+ |  |     |        | 
+ |  |     |        +- _ENTER_BINARY_L      (see above)
+ |  |     |        |  
+ |  |     |        +- _LSUB_k_is_k_minus_j
+ |  |     |             
+ |  |     +- escreveSerial       
+ |  |        | 
+ |  |        +- ASerial_SendChar    
+ |  |        |    
+ |  |        +- strcpy              
+ |  |             
+ |  +- configuraAmostragem 
+ |  |    
+ |  +- configuraIRQ        
+ |  |    
+ |  +- configuraLVD        
+ |  |    
+ |  +- escreveSerial        (see above)
+ |  |  
+ |  +- verificaSerial      
+ |  |  | 
+ |  |  +- leSerial            
+ |  |  |  | 
+ |  |  |  +- strcpy               (see above)
+ |  |  |  |  
+ |  |  |  +- incSerial           
+ |  |  |  |    
+ |  |  |  +- conta               
+ |  |  |  |  | 
+ |  |  |  |  +- _Jump_Table_Header_Offset
+ |  |  |  |       
+ |  |  |  +- _PUSH_CC            
+ |  |  |  |    
+ |  |  |  +- _POP_CC             
+ |  |  |  |    
+ |  |  |  +- ASerial_RecvChar    
+ |  |  |  |    
+ |  |  |  +- desligaTimer        
+ |  |  |  |  | 
+ |  |  |  |  +- _Jump_Table_Header_Offset (see above)
+ |  |  |  |     
+ |  |  |  +- tolower             
+ |  |  |  |    
+ |  |  |  +- escreveSerial        (see above)
+ |  |  |     
+ |  |  +- strcmp              
+ |  |  |    
+ |  |  +- incConf             
+ |  |  |    
+ |  |  +- conta                (see above)
+ |  |  |  
+ |  |  +- _PUSH_CC             (see above)
+ |  |  |  
+ |  |  +- _POP_CC              (see above)
+ |  |  |  
+ |  |  +- desligaTimer         (see above)
+ |  |  |  
+ |  |  +- autentica           
+ |  |  |  | 
+ |  |  |  +- escreveSerial        (see above)
+ |  |  |  |  
+ |  |  |  +- leSerial             (see above)
+ |  |  |  |  
+ |  |  |  +- strcmp               (see above)
+ |  |  |     
+ |  |  +- escreveSerial        (see above)
+ |  |     
+ |  +- paraAmostragem      
+ |  |  | 
+ |  |  +- escreveSerial        (see above)
+ |  |  |  
+ |  |  +- desligaTimer         (see above)
+ |  |     
+ |  +- relogio_GetTime     
+ |  |  | 
+ |  |  +- _LMODU_RC           
+ |  |  |  | 
+ |  |  |  +- _ENTER_BINARY_L_RC   (see above)
+ |  |  |  |  
+ |  |  |  +- _LMODU_k_is_k_mod_j 
+ |  |  |     | 
+ |  |  |     +- _LDIVMOD            
+ |  |  |          
+ |  |  +- _LDIVU_RC           
+ |  |  |  | 
+ |  |  |  +- _ENTER_BINARY_L_RC   (see above)
+ |  |  |  |  
+ |  |  |  +- _LDIVU_k_is_k_div_j 
+ |  |  |     | 
+ |  |  |     +- _LDIVMOD             (see above)
+ |  |  |        
+ |  |  +- _POP32               (see above)
+ |  |  |  
+ |  |  +- _IMODU_8            
+ |  |  |  | 
+ |  |  |  +- _IMODU_STAR08       
+ |  |  |     | 
+ |  |  |     +- _IDIVMOD            
+ |  |  |          
+ |  |  +- _IDIVU_8            
+ |  |     | 
+ |  |     +- _IDIVU_STAR08       
+ |  |        | 
+ |  |        +- _IDIVMOD             (see above)
+ |  |           
+ |  +- relogio_GetDate     
+ |  |    
+ |  +- salvaHeader         
+ |  |  | 
+ |  |  +- escreveMem           (see above)
+ |  |     
+ |  +- resetIRQ            
+ |  |  | 
+ |  |  +- desligaTimer         (see above)
+ |  |     
+ |  +- strcmp               (see above)
+ |  |  
+ |  +- iniciaAmostragem    
+ |  |  | 
+ |  |  +- escreveSerial        (see above)
+ |  |  |  
+ |  |  +- relogio_GetTime      (see above)
+ |  |  |  
+ |  |  +- relogio_GetDate      (see above)
+ |  |  |  
+ |  |  +- salvaHeader          (see above)
+ |  |  |  
+ |  |  +- getAmostra          
+ |  |  |  | 
+ |  |  |  +- amostra             
+ |  |  |  |  | 
+ |  |  |  |  +- _SEXT16_32           (see above)
+ |  |  |  |  |  
+ |  |  |  |  +- _LDIVS_LC           
+ |  |  |  |  |  | 
+ |  |  |  |  |  +- _ENTER_BINARY_L_LC  
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- _PUSH_ARGS_L         (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- _LDIVS_k_is_k_div_j 
+ |  |  |  |  |     | 
+ |  |  |  |  |     +- _SPLITSIGN_L        
+ |  |  |  |  |     |  | 
+ |  |  |  |  |     |  +- _ABS_L_HX           
+ |  |  |  |  |     |     | 
+ |  |  |  |  |     |     +- _NEG_L_HX           
+ |  |  |  |  |     |          
+ |  |  |  |  |     +- _LDIVMOD             (see above)
+ |  |  |  |  |     |  
+ |  |  |  |  |     +- _NEG_L_HX            (see above)
+ |  |  |  |  |        
+ |  |  |  |  +- _POP32               (see above)
+ |  |  |  |  |  
+ |  |  |  |  +- _LDIVU_LC           
+ |  |  |  |  |  | 
+ |  |  |  |  |  +- _ENTER_BINARY_L_LC   (see above)
+ |  |  |  |  |  |  
+ |  |  |  |  |  +- _LDIVU_k_is_k_div_j  (see above)
+ |  |  |  |  |     
+ |  |  |  |  +- _IDIVS_STAR08       
+ |  |  |  |  |  | 
+ |  |  |  |  |  +- _SPLITSIGN          
+ |  |  |  |  |     | 
+ |  |  |  |  |     +- _IDIVMOD             (see above)
+ |  |  |  |  |        
+ |  |  |  |  +- _IMUL_STAR08         (see above)
+ |  |  |  |     
+ |  |  |  +- salvaAmostra        
+ |  |  |     | 
+ |  |  |     +- escreveMem           (see above)
+ |  |  |        
+ |  |  +- conta                (see above)
+ |  |     
+ |  +- ajuda               
+ |  |  | 
+ |  |  +- escreveSerial        (see above)
+ |  |     
+ |  +- status              
+ |  |  | 
+ |  |  +- escreveSerial        (see above)
+ |  |  |  
+ |  |  +- sprintf              (see above)
+ |  |  |  
+ |  |  +- relogio_GetTime      (see above)
+ |  |  |  
+ |  |  +- relogio_GetDate      (see above)
+ |  |  |  
+ |  |  +- _LSUB_LC            
+ |  |  |  | 
+ |  |  |  +- _ENTER_BINARY_L_LC   (see above)
+ |  |  |  |  
+ |  |  |  +- _LSUB_k_is_k_minus_j (see above)
+ |  |  |     
+ |  |  +- _LMUL_RC             (see above)
+ |  |  |  
+ |  |  +- _LDIVU_RC            (see above)
+ |  |  |  
+ |  |  +- _POP32               (see above)
+ |  |     
+ |  +- setSenha            
+ |  |  | 
+ |  |  +- escreveSerial        (see above)
+ |  |  |  
+ |  |  +- leSerial             (see above)
+ |  |  |  
+ |  |  +- strlen              
+ |  |  |    
+ |  |  +- strcpy               (see above)
+ |  |     
+ |  +- setAmostragem       
+ |  |  | 
+ |  |  +- escreveSerial        (see above)
+ |  |  |  
+ |  |  +- leSerial             (see above)
+ |  |  |  
+ |  |  +- strtol              
+ |  |     | 
+ |  |     +- _strtol             
+ |  |     |  | 
+ |  |     |  +- isspace             
+ |  |     |  |    
+ |  |     |  +- isdigit             
+ |  |     |  |    
+ |  |     |  +- _strtoul            
+ |  |     |  |  | 
+ |  |     |  |  +- isspace              (see above)
+ |  |     |  |  |  
+ |  |     |  |  +- toupper             
+ |  |     |  |  |    
+ |  |     |  |  +- CheckCharWithBase   
+ |  |     |  |  |  | 
+ |  |     |  |  |  +- toupper              (see above)
+ |  |     |  |  |     
+ |  |     |  |  +- _SEXT16_32           (see above)
+ |  |     |  |  |  
+ |  |     |  |  +- _LSUB_LC             (see above)
+ |  |     |  |  |  
+ |  |     |  |  +- _LDIVU              
+ |  |     |  |  |  | 
+ |  |     |  |  |  +- _ENTER_BINARY_L      (see above)
+ |  |     |  |  |  |  
+ |  |     |  |  |  +- _LDIVU_k_is_k_div_j  (see above)
+ |  |     |  |  |     
+ |  |     |  |  +- _LCMP                (see above)
+ |  |     |  |  |  
+ |  |     |  |  +- _LMUL               
+ |  |     |  |  |  | 
+ |  |     |  |  |  +- _ENTER_BINARY_L      (see above)
+ |  |     |  |  |  |  
+ |  |     |  |  |  +- _LMUL_k_is_k_mul_j   (see above)
+ |  |     |  |  |     
+ |  |     |  |  +- _LADD                (see above)
+ |  |     |  |  |  
+ |  |     |  |  +- _POP32               (see above)
+ |  |     |  |  |  
+ |  |     |  |  +- _COPY                (see above)
+ |  |     |  |     
+ |  |     |  +- _LNEG                (see above)
+ |  |     |  |  
+ |  |     |  +- _POP32               (see above)
+ |  |     |  |  
+ |  |     |  +- _COPY                (see above)
+ |  |     |     
+ |  |     +- _COPY                (see above)
+ |  |        
+ |  +- mostrar             
+ |  |  | 
+ |  |  +- escreveSerial        (see above)
+ |  |  |  
+ |  |  +- _IDIVU_STAR08        (see above)
+ |  |  |  
+ |  |  +- _IMODU_STAR08        (see above)
+ |  |  |  
+ |  |  +- sprintf              (see above)
+ |  |  |  
+ |  |  +- leDado               (see above)
+ |  |  |  
+ |  |  +- leHeader             (see above)
+ |  |     
+ |  +- setDate             
+ |  |  | 
+ |  |  +- escreveSerial        (see above)
+ |  |  |  
+ |  |  +- leSerial             (see above)
+ |  |  |  
+ |  |  +- strlen               (see above)
+ |  |  |  
+ |  |  +- sscanf              
+ |  |  |  | 
+ |  |  |  +- vsscanf             
+ |  |  |     | 
+ |  |  |     +- _getNum             
+ |  |  |     |  | 
+ |  |  |     |  +- _IMUL_STAR08         (see above)
+ |  |  |     |     
+ |  |  |     +- _Jump_Table_Addr     (see above)
+ |  |  |     |  
+ |  |  |     +- _Search_Table_8_Addr (see above)
+ |  |  |     |  
+ |  |  |     +- _strtol              (see above)
+ |  |  |     |  
+ |  |  |     +- _Jump_Table_Header_Offset (see above)
+ |  |  |     |  
+ |  |  |     +- _COPY                (see above)
+ |  |  |     |  
+ |  |  |     +- _SEXT16_32           (see above)
+ |  |  |     |  
+ |  |  |     +- _POP32               (see above)
+ |  |  |     |  
+ |  |  |     +- _copyList           
+ |  |  |     |    
+ |  |  |     +- isspace              (see above)
+ |  |  |        
+ |  |  +- relogio_SetDate      (see above)
+ |  |  |  
+ |  |  +- sprintf              (see above)
+ |  |     
+ |  +- setTime             
+ |  |  | 
+ |  |  +- escreveSerial        (see above)
+ |  |  |  
+ |  |  +- leSerial             (see above)
+ |  |  |  
+ |  |  +- strlen               (see above)
+ |  |  |  
+ |  |  +- sscanf               (see above)
+ |  |  |  
+ |  |  +- relogio_SetTime      (see above)
+ |  |  |  
+ |  |  +- sprintf              (see above)
+ |  |     
+ |  +- calibrar            
+ |  |  | 
+ |  |  +- escreveSerial        (see above)
+ |  |  |  
+ |  |  +- leSerial             (see above)
+ |  |  |  
+ |  |  +- strtol               (see above)
+ |  |  |  
+ |  |  +- calibrarAmostragem  
+ |  |     | 
+ |  |     +- _SEXT16_32           (see above)
+ |  |     |  
+ |  |     +- _LDIVS_LC            (see above)
+ |  |     |  
+ |  |     +- _POP32               (see above)
+ |  |     |  
+ |  |     +- _LDIVU_LC            (see above)
+ |  |     |  
+ |  |     +- _IMUL_STAR08         (see above)
+ |  |     |  
+ |  |     +- _IDIVS_STAR08        (see above)
+ |  |        
+ |  +- sair                
+ |  |  | 
+ |  |  +- escreveSerial        (see above)
+ |  |     
+ |  +- limparMem            (see above)
+ |     
+ +- _EntryPoint         
+    | 
+    +- _Startup            
+       | 
+       +- Init                
+       |  | 
+       |  +- loadByte            
+       |       
+       +- main                 (see above)
+          
+ _vect               
+ | 
+ +- timer3              
+ |    
+ +- Cpu_Interrupt       
+ |    
+ +- relogio_Interrupt   
+ |  | 
+ |  +- _LADD_RC            
+ |  |  | 
+ |  |  +- _ENTER_BINARY_L_RC   (see above)
+ |  |  |  
+ |  |  +- _LADD_k_is_k_plus_j  (see above)
+ |  |     
+ |  +- _POP32               (see above)
+ |  |  
+ |  +- _LCMP                (see above)
+ |  |  
+ |  +- _LCMP_RC            
+ |  |  | 
+ |  |  +- _ENTER_BINARY_L_RC   (see above)
+ |  |  |  
+ |  |  +- _LCMP_k_rel_j        (see above)
+ |  |     
+ |  +- _LSUB_RC            
+ |  |  | 
+ |  |  +- _ENTER_BINARY_L_RC   (see above)
+ |  |  |  
+ |  |  +- _LSUB_k_is_k_minus_j (see above)
+ |  |     
+ |  +- _LINC               
+ |     | 
+ |     +- _ENTER_UNARY_L       (see above)
+ |        
+ +- timer2              
+ |    
+ +- timer1              
+ |    
+ +- tensaoBaixa         
+ |  | 
+ |  +- escreveSerial        (see above)
+ |  |  
+ |  +- paraAmostragem       (see above)
+ |  |  
+ |  +- relogio_GetTime      (see above)
+ |  |  
+ |  +- relogio_GetDate      (see above)
+ |  |  
+ |  +- salvaHeader          (see above)
+ |     
+ +- interruptIRQ        
+ |  | 
+ |  +- contaSegundo        
+ |  |    
+ |  +- conta                (see above)
+ |     
+ +- _EntryPoint          (see above)
+    
+*********************************************************************************************
+STATISTIC SECTION
+---------------------------------------------------------------------------------------------
+
+ExeFile:
+--------
+Number of blocks to be downloaded: 8
+Total size of all blocks to be downloaded: 13904
+
